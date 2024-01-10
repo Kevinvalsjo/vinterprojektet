@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="" />
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="uh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +25,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/kevin.valsjo/ProjektProgam/Vinterprojekto/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
@@ -37,19 +41,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704878261728</updated>
-      <workItem from="1704878262782" duration="2000" />
+      <workItem from="1704878262782" duration="399000" />
     </task>
+    <task id="LOCAL-00001" summary="uh">
+      <option name="closed" value="true" />
+      <created>1704878313993</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704878313993</updated>
+    </task>
+    <task id="LOCAL-00002" summary="uh">
+      <option name="closed" value="true" />
+      <created>1704878331601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704878331601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="uh">
+      <option name="closed" value="true" />
+      <created>1704878416587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704878416587</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uh" />
+    <option name="LAST_COMMIT_MESSAGE" value="uh" />
   </component>
 </project>
