@@ -1,9 +1,17 @@
 public class Mat {
 
 
-    public Mat(){}
+    public void Start(){
+
+
+    }
 
     public void Banan(){
+Banan();
+    }
+
+    public void sås(){
+      sås();
 
     }
 }

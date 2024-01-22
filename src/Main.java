@@ -4,6 +4,10 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Välkommen till the food program där man kan göra bra food.");
 
+        System.out.println(int a , String b)(
+                return a+b;
+                )
+
 
 
 
