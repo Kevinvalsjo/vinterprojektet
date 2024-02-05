@@ -5,6 +5,7 @@ public Ingredienser(String ingrediens){
     this.ingrediens =ingrediens;
 }
 public String getIngrediens(){
+
     return ingrediens;
 }
 

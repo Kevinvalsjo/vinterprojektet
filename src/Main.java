@@ -2,13 +2,14 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Välkommen till the food program där man kan göra bra food.");
+        System.out.println("Välkommen till the food program där man kan göra bra food");
 
-        System.out.println(int a , String b)(
-                return a+b;
-                )
+        Ingredienser ingrediens = new Ingredienser("Banan,Salt,Bacon,Banan,Sås");
 
+        String ingredientName = ingrediens.getIngrediens();
 
+        // Print the ingredient name
+        System.out.println("Ingredient: " + ingredientName);
 
 
 
