@@ -1,4 +1,8 @@
 public class Bacon {
-    private int kalorier;
-    private int namn;
+
+    private String namn;
+
+    public void bacons() {
+        System.out.println("bacon");
+    }
 }

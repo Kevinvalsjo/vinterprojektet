@@ -1,14 +1,14 @@
 class sås extends Ingredienser{
-    private int kalorier;
-    private int namn;
-    public sås(int kalorier, String ingrediens){
-        super(ingrediens);
-        this.kalorier = kalorier;
+
+    private String namn;
+    public sås(String namn){
+        super(namn);
+
 
     }
 
-    public int getKalorier(){
-        return kalorier;
-    }
+
+
+
 
 }
