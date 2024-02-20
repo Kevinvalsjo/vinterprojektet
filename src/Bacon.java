@@ -1,4 +1,4 @@
-public class Bacon {
+public class Bacon  extends Ingredienser{
 
     private String namn;
 
