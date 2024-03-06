@@ -1,4 +1,4 @@
-public class Sås extends Ingredienser{
+public class Sås {
 
 
 

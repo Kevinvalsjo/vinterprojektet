@@ -3,7 +3,6 @@
 
 import java.sql.SQLOutput;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Välkommen till the food program där man kan göra bra food");
@@ -31,6 +30,7 @@ public class Main {
             bacon.bacons();
                  }
 
+salt.location();
 
 
         System.out.println("Vill du dricka saltet?");
@@ -42,9 +42,9 @@ public class Main {
         svar = tangentbord.next();
         if(svar.equalsIgnoreCase("ja"))
                      {
-            System.out.println("Jag skulle rekommendera att inte dricka saltet, vad säger du om detta?");
+            System.out.println("Jag skulle rekommendera att inte dricka saltet");
             svar = tangentbord.next();
-            if(svar.equalsIgnoreCase("jag tycker de E jettä bra") ){
+            if(svar.equalsIgnoreCase("hej") ){
                 System.out.println("Vill du ha såsen");
                     }
         }

@@ -2,8 +2,8 @@ import java.security.spec.RSAOtherPrimeInfo;
 class Ingredienser{
     private String ingrediens;
 
-    public void ljud(){
-    System.out.println("gör ett ljud");
+    public void location(){
+    System.out.println("");
 }
 public String getIngrediens(){
 
