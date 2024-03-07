@@ -1,9 +1,14 @@
 public class Salt extends Ingredienser{
 
-    public void location() {
-        super.location();
-    }
 
+    Salt(String name,int kalo){
+        this.
+
+        this.kalorier = kalo;
+    }
+    public int saltkal(){
+        return kalorier;
+    }
     public void saltet()
 {
     System.out.println("Det här saltet kommer från Uganda och produceras i naturlig miljö");

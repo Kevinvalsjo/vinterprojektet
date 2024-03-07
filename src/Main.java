@@ -10,32 +10,31 @@ public class Main {
         Ingredienser ingrediens = new Ingredienser();
 
         Scanner tangentbord = new Scanner(System.in);
-        Salt salt = new Salt();
-        Bacon bacon = new Bacon();
+        Salt salt = new Salt("ugand",3);
+        Bacon bacon = new Bacon("primabacon");
         Sås sås = new Sås();
 
+        System.out.println(salt.saltkal());
 
-
-        System.out.println("Hejsan velkommÄN till min little Matstöga vill du laga lite mat?");
+        System.out.println("Hejsan välkommen till matstugan");
         String svar = tangentbord.next();
         while(!"ja".equalsIgnoreCase(svar) && !"Nej".equalsIgnoreCase(svar))
                  {
             System.out.println("Du måste skriva 'ja' eller 'nej'");
             svar = tangentbord.next();
                  }
-        System.out.println("Vill du ha bacon?");
+        System.out.println("Vill du veta stället där salt kommer ifrån?");
         svar = tangentbord.next();
         if(svar.equalsIgnoreCase("ja"))
                  {
-            bacon.bacons();
-                 }
+                     salt.saltet();
 
-salt.location();
+                 }System.out.println(bacon.baconnamn());
 
-
+/*
         System.out.println("Vill du dricka saltet?");
         svar = tangentbord.next();
-
+        bacon.bacons();
         if(svar.equalsIgnoreCase("ja"))
         {salt.drink();
             System.out.println("Varför dricker du saltet är du dum i huvet");
@@ -46,7 +45,10 @@ salt.location();
             svar = tangentbord.next();
             if(svar.equalsIgnoreCase("hej") ){
                 System.out.println("Vill du ha såsen");
+
                     }
         }
     }
+
+ */
 }}
