@@ -1,17 +1,20 @@
 public class Bacon extends Ingredienser{
-    private String namn;
 
-    //constructor för Bacon
-    Bacon(String namn1){
 
-        this.namn = namn1;
+    Bacon(String plats,int kalo){
+        this.location=plats;
+
+        this.kalorier = kalo;
     }
-    public String baconnamn(){
-        return namn;
+    public int baconkalo(){
+
+        return kalorier;
+    }
+    public String baconplats(){
+        return location;
+
     }
 
-
-    public void bacons() {
-
-    }
+    //constructor för Baco
+//
 }

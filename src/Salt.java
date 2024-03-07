@@ -1,13 +1,18 @@
 public class Salt extends Ingredienser{
 
 
-    Salt(String name,int kalo){
-        this.
+    Salt(String plats,int kalo){
+        this.location=plats;
 
         this.kalorier = kalo;
     }
-    public int saltkal(){
+    public int saltkalo(){
+
         return kalorier;
+    }
+    public String saltplats(){
+        return location;
+
     }
     public void saltet()
 {
