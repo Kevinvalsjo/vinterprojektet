@@ -8,14 +8,16 @@ public class Main {
     public static void main(String[] args) {
         int svar1=0;
         String svar;
-        int fortsätt=0;
+        int info=0;
+        int laga=0;
+        int total=0;
         System.out.println("Välkommen till the food program där man kan göra bra food");
 
         Ingredienser ingrediens = new Ingredienser();
 
         Scanner tangentbord = new Scanner(System.in);
-        Salt salt = new Salt("uganda",3);
-        Bacon bacon = new Bacon("primabacon",80);
+        Salt salt = new Salt("Uganda",3);
+        Bacon bacon = new Bacon("Danmark",80);
         Sås sås = new Sås("Spanien",100);
 
 
@@ -29,6 +31,8 @@ public class Main {
                  }
 
 
+
+
        /* System.out.println("Vill du veta stället där salt kommer ifrån?");
         svar = tangentbord.next();
         if(svar.equalsIgnoreCase("ja"))
@@ -40,7 +44,7 @@ public class Main {
 
         System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna? säg ja" );
         svar = tangentbord.next();
-        while(fortsätt==0) {
+        while(info==0) {
             if (svar.equalsIgnoreCase("ja")) {
                 System.out.println("vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås");
                 ;
@@ -96,13 +100,35 @@ public class Main {
                 } System.out.println("Vill du veta mer om ingredienserna? svara ja isåfall");
                 svar= tangentbord.next();
                 if(svar.equalsIgnoreCase("nej")){
-                    fortsätt=1;
+                    info=1;
                 }
             }
 
         }
 
+        System.out.println("Ok nu när du har fått reda på lite om ingredienser så ska vi laga en soppa.");
+        while(laga==0) {
+            System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås");
+            svar1 = tangentbord.nextInt();
+            switch (svar1) {
+                case 1 -> {
+                    total += 3;
+                    System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);
 
+                }
+                case 2 -> {
+                    total += 100;
+                    System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);
+
+                }
+                case 3 -> {
+                    total += 80;
+                    System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);
+
+                }
+
+            }
+        }
 /*
         System.out.println("Vill du dricka saltet?");
         svar = tangentbord.next();
