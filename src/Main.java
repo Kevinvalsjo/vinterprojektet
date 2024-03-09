@@ -16,11 +16,9 @@ public class Main {
         Ingredienser ingrediens = new Ingredienser();
 
         Scanner tangentbord = new Scanner(System.in);
-        Salt salt = new Salt("Uganda",3);
-        Bacon bacon = new Bacon("Danmark",80);
-        Sås sås = new Sås("Spanien",100);
-
-
+        Salt salt = new Salt("Uganda",3, 10);
+        Bacon bacon = new Bacon("Danmark",80, 20 );
+        Sås sås = new Sås("Spanien",100, 50);
 
         System.out.println("Hejsan välkommen till matstugan vill du laga mat");
        svar = tangentbord.next();
@@ -29,18 +27,6 @@ public class Main {
             System.out.println("Du måste skriva 'ja' eller 'nej'");
             svar = tangentbord.next();
                  }
-
-
-
-
-       /* System.out.println("Vill du veta stället där salt kommer ifrån?");
-        svar = tangentbord.next();
-        if(svar.equalsIgnoreCase("ja"))
-                 {
-                     salt.saltet();
-
-                 }
-*/
 
         System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna? säg ja" );
         svar = tangentbord.next();
@@ -114,17 +100,22 @@ public class Main {
                 case 1 -> {
                     total += 3;
                     System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);
+                    salt.uses++;
+
+                    System.out.println("Du har bara "+ salt.saltuses()+"kvar");
 
                 }
                 case 2 -> {
                     total += 100;
                     System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);
-
+                    bacon.uses++;
+                    System.out.println("Du har bara "+ bacon.baconuses()+"kvar");
                 }
                 case 3 -> {
                     total += 80;
                     System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);
-
+                    sås.uses++;
+                    System.out.println("Du har bara "+ sås.såsuses()+"kvar");
                 }
 
             }
