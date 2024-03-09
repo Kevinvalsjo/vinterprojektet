@@ -27,18 +27,23 @@ public class Main {
             svar = tangentbord.next();
                  }
         if(svar.equalsIgnoreCase("nej"))
-        {
+            {
             System.out.println("hejdå");
             info=1;
+            laga=1;
 
-        }
-
-
-        while(info==0) {
+             }
+        else{
             System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna?(Ja/Nej)" );
             svar = tangentbord.next();
+        }
+
+        while(info==0) {
+
+
+
             if (svar.equalsIgnoreCase("ja")) {
-                System.out.println("vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås");
+                System.out.println("Vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås 4.Ingen");
                 ;
 
                 svar1 = tangentbord.nextInt();
@@ -87,12 +92,11 @@ public class Main {
                             }
                         }
                     }
+                    case 4 ->{
+                        info=1;
+                    }
 
 
-                } System.out.println("Vill du veta mer om ingredienserna? (Ja/Nej)");
-                svar= tangentbord.next();
-                if(svar.equalsIgnoreCase("nej")){
-                    info=1;
                 }
             }
             else{
@@ -101,7 +105,7 @@ public class Main {
 
         }
 
-        System.out.println("Ok nu när du har fått reda på lite om ingredienser så ska vi laga en soppa.");
+
         while(laga==0) {
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4.Avsluta");
             svar1 = tangentbord.nextInt();
@@ -128,17 +132,16 @@ public class Main {
                     System.out.println("Du har bara "+ sås.såsuses()+" kvar");
                 }
                 case 4 ->{
-                    System.out.println("Din maträtt har"+total+" kalorier");
+                    System.out.println("Din maträtt har "+total+" kalorier");
                     laga=1;
                 }
 
             }
 
 
-            if(total >=257){
-                System.out.println("Du har nu en rätt som har mer kalorier än en big mac.");
 
-            }
+
+
 
 
         }
