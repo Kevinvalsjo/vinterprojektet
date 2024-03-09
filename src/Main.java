@@ -11,8 +11,7 @@ public class Main {
         int info=0;
         int laga=0;
         int total=0;
-        System.out.println("Välkommen till the food program där man kan göra bra food");
-
+        System.out.println("Välkommen till the food program där man kan göra bra mat");
         Ingredienser ingrediens = new Ingredienser();
 
         Scanner tangentbord = new Scanner(System.in);
@@ -20,17 +19,24 @@ public class Main {
         Bacon bacon = new Bacon("Danmark",80, 20 );
         Sås sås = new Sås("Spanien",100, 50);
 
-        System.out.println("Hejsan välkommen till matstugan vill du laga mat");
+        System.out.println("Vill du laga mat? (Ja/Nej)");
        svar = tangentbord.next();
-        while(!"ja".equalsIgnoreCase(svar) && !"Nej".equalsIgnoreCase(svar))
+        while(!"ja".equalsIgnoreCase(svar) && !"nej".equalsIgnoreCase(svar))
                  {
             System.out.println("Du måste skriva 'ja' eller 'nej'");
             svar = tangentbord.next();
                  }
+        if(svar.equalsIgnoreCase("nej"))
+        {
+            System.out.println("hejdå");
+            info=1;
 
-        System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna? säg ja" );
-        svar = tangentbord.next();
+        }
+
+
         while(info==0) {
+            System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna?(Ja/Nej)" );
+            svar = tangentbord.next();
             if (svar.equalsIgnoreCase("ja")) {
                 System.out.println("vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås");
                 ;
@@ -83,46 +89,58 @@ public class Main {
                     }
 
 
-                } System.out.println("Vill du veta mer om ingredienserna? svara ja isåfall");
+                } System.out.println("Vill du veta mer om ingredienserna? (Ja/Nej)");
                 svar= tangentbord.next();
                 if(svar.equalsIgnoreCase("nej")){
                     info=1;
                 }
+            }
+            else{
+                info=1;
             }
 
         }
 
         System.out.println("Ok nu när du har fått reda på lite om ingredienser så ska vi laga en soppa.");
         while(laga==0) {
-            System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås");
+            System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4.Avsluta");
             svar1 = tangentbord.nextInt();
             switch (svar1) {
                 case 1 -> {
                     total += 3;
                     System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);
-                    salt.uses++;
+                    salt.uses--;
 
-                    System.out.println("Du har bara "+ salt.saltuses()+"kvar");
+                    System.out.println("Du har bara "+ salt.saltuses()+" kvar");
 
                 }
                 case 2 -> {
                     total += 100;
                     System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);
-                    bacon.uses++;
-                    System.out.println("Du har bara "+ bacon.baconuses()+"kvar");
+                    bacon.uses--;
+
+                    System.out.println("Du har bara "+ bacon.baconuses()+" kvar");
                 }
                 case 3 -> {
                     total += 80;
                     System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);
-                    sås.uses++;
-                    System.out.println("Du har bara "+ sås.såsuses()+"kvar");
+                    sås.uses--;
+                    System.out.println("Du har bara "+ sås.såsuses()+" kvar");
+                }
+                case 4 ->{
+                    System.out.println("Din maträtt har"+total+" kalorier");
+                    laga=1;
                 }
 
             }
+
+
             if(total >=257){
                 System.out.println("Du har nu en rätt som har mer kalorier än en big mac.");
 
             }
+
+
         }
 /*
         System.out.println("Vill du dricka saltet?");

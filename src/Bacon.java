@@ -5,6 +5,7 @@ public class Bacon extends Ingredienser{
         this.location=plats;
 
         this.kalorier = kalo;
+
         this.uses = uses;
     }
     public int baconkalo(){
