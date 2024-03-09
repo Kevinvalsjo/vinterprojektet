@@ -128,6 +128,10 @@ public class Main {
                 }
 
             }
+            if(total >=257){
+                System.out.println("Du har nu en rätt som har mer kalorier än en big mac.");
+
+            }
         }
 /*
         System.out.println("Vill du dricka saltet?");
