@@ -4,4 +4,8 @@ class Ingredienser{
     public int kalorier;
     public int uses;
 
-}
+
+public void info(){
+
+
+}}
