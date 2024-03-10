@@ -18,8 +18,8 @@ public class Main {
         Salt salt = new Salt("Uganda",3, 10);
         Bacon bacon = new Bacon("Danmark",80, 20 );
         Sås sås = new Sås("Spanien",50, 50);
-        Ris ris = new Ris(,100, 5);
-        Majs majs = new Majs(Argentina,20,10);
+        Ris ris = new Ris("Kina",100, 5);
+        Majs majs = new Majs("Argentina",20, 10);
 
         System.out.println("Vill du laga mat? (Ja/Nej)");
        svar = tangentbord.next();
@@ -141,41 +141,61 @@ public class Main {
             svar1 = tangentbord.nextInt();
             switch (svar1) {
                 case 1 -> {
-                    total += 3;
-                    System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);
+                    if(bacon.uses<=0){
+                        System.out.println("Du har ingen mer salt");
+                    }
+                    else {
+                        System.out.println("Du har bara "+ salt.saltuses()+" kvar");
+
                     salt.uses--;
-
-                    System.out.println("Du har bara "+ salt.saltuses()+" kvar");
-
+                    total += 3;
+                    System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);}
                 }
                 case 2 -> {
-                    total += 100;
-                    System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);
-                    bacon.uses--;
+                    if(bacon.uses<=0){
+                        System.out.println("Du har ingen mer bacon");
+                    }
+                    else {
+                        System.out.println("Du har bara "+ bacon.baconuses()+" kvar");
 
-                    System.out.println("Du har bara "+ bacon.baconuses()+" kvar");
+                    bacon.uses--;
+                    total += 100;
+                    System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);}
+
+
                 }
                 case 3 -> {
-                    total += 80;
-                    System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);
+                    if(sås.uses<=0){
+                        System.out.println("Du har ingen mer sås");
+                    }
+                    else {
+                        System.out.println("Du har bara "+ sås.såsuses()+" kvar");
+
                     sås.uses--;
-                    System.out.println("Du har bara "+ sås.såsuses()+" kvar");
+                    total += 80;
+                    System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);}
                 }
                 case 4 -> {
-                    total += 100;
-                    System.out.println("Du har lagt i lite Ris och kalorierna av soppan har gått upp till "+ total);
+                    if(ris.uses<=0){
+                        System.out.println("Du har ingen mer ris");
+                    }
+                    else {
+                        System.out.println("Du har bara "+ ris.risuses()+" kvar");
+
                     ris.uses--;
-
-                    System.out.println("Du har bara "+ ris.risuses()+" kvar");
-
+                    total += 100;
+                    System.out.println("Du har lagt i lite ris och kalorierna av soppan har gått upp till "+ total);}
                 }
                 case 5 -> {
-                    total += 20;
-                    System.out.println("Du har lagt i lite majs och kalorierna av soppan har gått upp till "+ total);
+                    if(majs.uses<=0){
+                        System.out.println("Du har ingen mer majs");
+                    }
+                    else {
+                        System.out.println("Du har bara "+ majs.majsuses()+" kvar");
+
                     majs.uses--;
-
-                    System.out.println("Du har bara "+ majs.majsuses()+" kvar");
-
+                    total += 20;
+                    System.out.println("Du har lagt i lite majs och kalorierna av soppan har gått upp till "+ total);}
                 }
                 case 6 ->{
                     System.out.println("Din maträtt har "+total+" kalorier");

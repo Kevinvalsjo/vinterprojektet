@@ -1,4 +1,5 @@
-public class Ris extends Ingredienser{
+public class Ris extends Ingredienser {
+
     Ris(String plats,int kalo, int uses){
         this.location=plats;
 
@@ -9,9 +10,13 @@ public class Ris extends Ingredienser{
 
     public int risuses(){
         return uses;
-    }
+                        }
     public int riskalo(){
 
         return kalorier;
-    }
+                         }
+    public String risplats() {
+        return location;
+
+                             }
 }

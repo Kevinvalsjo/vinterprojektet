@@ -13,5 +13,9 @@ public class Majs extends Ingredienser{
     public int majskalo(){
 
         return kalorier;
+    }  public String majsplats() {
+        return location;
+
     }
+
 }
