@@ -23,33 +23,42 @@ public class Main {
 
         System.out.println("Vill du laga mat? (Ja/Nej)");
        svar = tangentbord.next();
+
         while(!"ja".equalsIgnoreCase(svar) && !"nej".equalsIgnoreCase(svar))
+
                  {
+
             System.out.println("Du måste skriva 'ja' eller 'nej'");
             svar = tangentbord.next();
+
                  }
         if(svar.equalsIgnoreCase("nej"))
+
             {
             System.out.println("hejdå");
             info=1;
             laga=1;
 
              }
+
         else{
             System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna?(Ja/Nej)" );
             svar = tangentbord.next();
         }
 
+
         while(info==0) {
 
-
-
-            if (svar.equalsIgnoreCase("ja")) {
+            if (svar.equalsIgnoreCase("ja"))
+            {
                 System.out.println("Vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Ingen");
                 ;
 
                 svar1 = tangentbord.nextInt();
                 switch (svar1) {
+
+
+
                     case 1 -> {
                         System.out.println("Så du vill veta lite mer om salt, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                         svar1 = tangentbord.nextInt();
@@ -62,10 +71,16 @@ public class Main {
                             case 2 -> {
                                 System.out.println("Den här produkten kommer ifrån " + salt.saltplats());
                             }
-                        }
-                    }
+                                        }
+                              }
 
-                    case 2 -> {
+
+
+
+                    case 2 ->
+
+
+                                    {
                         System.out.println("Så du vill veta lite mer om bacon, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                         svar1 = tangentbord.nextInt();
                         switch (svar1) {
@@ -77,11 +92,15 @@ public class Main {
                                 System.out.println("Den här produkten kommer ifrån " + bacon.baconplats());
 
                             }
-                        }
-                    }
+                                        }
+
+                                    }
 
 
-                    case 3 -> {
+
+                    case 3 ->
+
+                                        {
                         System.out.println("Så du vill veta lite mer om sås, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                         svar1 = tangentbord.nextInt();
                         switch (svar1) {
@@ -92,36 +111,60 @@ public class Main {
                             case 2 -> {
                                 System.out.println("Den här produkten kommer ifrån " + sås.såsplats());
                             }
-                        }
-                    }
+                                        }
+
+
+                                         }
+
+
+
                     case 4 -> {
                         System.out.println("Så du vill veta lite mer om Ris, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                         svar1 = tangentbord.nextInt();
                         switch (svar1) {
 
-                            case 1 -> {
+                            case 1 ->
+
+                            {
                                 System.out.println("Den här produkten har " + ris.riskalo() + " kalorier");
 
                             }
-                            case 2 -> {
+                            case 2 ->
+
+                            {
                                 System.out.println("Den här produkten kommer ifrån " + ris.risplats());
                             }
-                        }
-                    }
-                    case 5 -> {
+                                         }
+                                }
+
+
+
+
+                    case 5 ->
+
+
+                                    {
                         System.out.println("Så du vill veta lite mer om Majs, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                         svar1 = tangentbord.nextInt();
                         switch (svar1) {
 
-                            case 1 -> {
+
+                            case 1 ->
+
+                            {
                                 System.out.println("Den här produkten har " + majs.majskalo() + " kalorier");
 
                             }
+
+
                             case 2 -> {
                                 System.out.println("Den här produkten kommer ifrån " + majs.majsplats());
                             }
-                        }
-                    }
+                                          }
+                                 }
+
+
+
                     case 6 ->{
                         info=1;
                     }
@@ -140,18 +183,28 @@ public class Main {
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Avsluta");
             svar1 = tangentbord.nextInt();
             switch (svar1) {
-                case 1 -> {
+
+
+
+                case 1 ->
+
+
+                                {
                     if(bacon.uses<=0){
                         System.out.println("Du har ingen mer salt");
-                    }
+                                    }
                     else {
                         System.out.println("Du har bara "+ salt.saltuses()+" kvar");
 
                     salt.uses--;
                     total += 3;
                     System.out.println("Du har lagt i lite salt och kalorierna av soppan har gått upp till "+ total);}
-                }
-                case 2 -> {
+                                }
+
+
+
+                case 2 ->
+                                {
                     if(bacon.uses<=0){
                         System.out.println("Du har ingen mer bacon");
                     }
@@ -160,11 +213,16 @@ public class Main {
 
                     bacon.uses--;
                     total += 100;
-                    System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);}
+                    System.out.println("Du har lagt i lite bacon och kalorierna av soppan har gått upp till "+ total);
+                        }
+                                 }
 
 
-                }
-                case 3 -> {
+
+                case 3 ->
+
+
+                                {
                     if(sås.uses<=0){
                         System.out.println("Du har ingen mer sås");
                     }
@@ -174,8 +232,14 @@ public class Main {
                     sås.uses--;
                     total += 80;
                     System.out.println("Du har lagt i lite sås och kalorierna av soppan har gått upp till "+ total);}
-                }
-                case 4 -> {
+                                 }
+
+
+
+                case 4 ->
+
+
+                                    {
                     if(ris.uses<=0){
                         System.out.println("Du har ingen mer ris");
                     }
@@ -185,8 +249,13 @@ public class Main {
                     ris.uses--;
                     total += 100;
                     System.out.println("Du har lagt i lite ris och kalorierna av soppan har gått upp till "+ total);}
-                }
-                case 5 -> {
+                                    }
+
+
+                case 5 ->
+
+
+                             {
                     if(majs.uses<=0){
                         System.out.println("Du har ingen mer majs");
                     }
@@ -196,8 +265,14 @@ public class Main {
                     majs.uses--;
                     total += 20;
                     System.out.println("Du har lagt i lite majs och kalorierna av soppan har gått upp till "+ total);}
-                }
-                case 6 ->{
+                             }
+
+
+
+                case 6 ->
+
+
+                {
                     System.out.println("Din maträtt har "+total+" kalorier");
                     laga=1;
                 }
