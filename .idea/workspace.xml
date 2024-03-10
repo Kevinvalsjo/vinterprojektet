@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="d">
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="mer ingredienser och har lagt till en gräns så att kalorierna inte går upp om en viss ingrediens tagit slut">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Majs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Majs.java" afterDir="false" />
@@ -76,7 +76,7 @@
       <workItem from="1707118701912" duration="2083000" />
       <workItem from="1707724043381" duration="2340000" />
       <workItem from="1707910059773" duration="2982000" />
-      <workItem from="1709715483003" duration="16943000" />
+      <workItem from="1709715483003" duration="17453000" />
     </task>
     <task id="LOCAL-00001" summary="uh">
       <option name="closed" value="true" />
@@ -214,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710072714431</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="mer ingredienser och har lagt till en gräns så att kalorierna inte går upp om en viss ingrediens tagit slut">
+      <option name="closed" value="true" />
+      <created>1710074438573</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1710074438573</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +235,7 @@
     <MESSAGE value="Förbättrat looparna och svaren" />
     <MESSAGE value="gjort tweaks så att programmet är snyggare och gjort så att det går att programmet avslutas eller går vidare till nästa del av koden när man svarar &quot;nej&quot; eller 4" />
     <MESSAGE value="d" />
-    <option name="LAST_COMMIT_MESSAGE" value="d" />
+    <MESSAGE value="mer ingredienser och har lagt till en gräns så att kalorierna inte går upp om en viss ingrediens tagit slut" />
+    <option name="LAST_COMMIT_MESSAGE" value="mer ingredienser och har lagt till en gräns så att kalorierna inte går upp om en viss ingrediens tagit slut" />
   </component>
 </project>
