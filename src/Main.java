@@ -6,11 +6,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int svar1=0;
+        int i=0;
+        int svar1=i;
         String svar;
-        int info=0;
-        int laga=0;
-        int total=0;
+        int info=i;
+        int laga=i;
+        int total=i;
         System.out.println("Välkommen till the food program där man kan göra bra mat");
         Ingredienser ingrediens = new Ingredienser();
 
@@ -20,6 +21,7 @@ public class Main {
         Sås sås = new Sås("Spanien",50, 50);
         Ris ris = new Ris("Kina",100, 5);
         Majs majs = new Majs("Argentina",20, 10);
+//skapar objekt för ingredienserna och anger dess egenskaper
 
         System.out.println("Vill du laga mat? (Ja/Nej)");
        svar = tangentbord.next();
@@ -31,7 +33,10 @@ public class Main {
             System.out.println("Du måste skriva 'ja' eller 'nej'");
             svar = tangentbord.next();
 
-                 }
+                 }//körs tills användaren skriver rätt,
+
+
+
         if(svar.equalsIgnoreCase("nej"))
 
             {
@@ -42,16 +47,16 @@ public class Main {
              }
 
         else{
-            System.out.println("Tjenare du där borta innan vi börjar skulle du vilja veta lite om ingredienserna?(Ja/Nej)" );
+            System.out.println("Tjenare du där borta innan vi börjar laga mat, skulle du vilja veta lite om ingredienserna som du kan välja?(Ja/Nej)" );
             svar = tangentbord.next();
         }
 
-while(laga!=2){
-        while(info==0) {
+while(laga!=2){//while loop som omfattar andra while loopar så att man alltid kan t.ex veta mer om en ingrediens oavsett om man har hoppat ur just den while loopen
+        while(info==i) {
 laga=0;
             if (svar.equalsIgnoreCase("ja"))
             {
-                System.out.println("Vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Ingen");
+                System.out.println("Vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
                 ;
 
                 svar1 = tangentbord.nextInt();
@@ -179,17 +184,22 @@ laga=0;
         }
 
 
-        while(laga==0) {
+
+
+
+
+
+        while(laga==i) {
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta");
             svar1 = tangentbord.nextInt();
             switch (svar1) {
 
 
                 case 1 -> {
-                    if (bacon.uses <= 0) {
+                    if (salt.uses <= i) {
                         System.out.println("Du har ingen mer salt");
                     } else {
-                        System.out.println("Du har bara " + salt.saltuses() + " kvar");
+                        System.out.println("Du har bara " + salt.saltuses() + " saltanvändningar kvar");
 
                         salt.uses--;
                         total += 3;
@@ -199,10 +209,10 @@ laga=0;
 
 
                 case 2 -> {
-                    if (bacon.uses <= 0) {
+                    if (bacon.uses <= i) {
                         System.out.println("Du har ingen mer bacon");
                     } else {
-                        System.out.println("Du har bara " + bacon.baconuses() + " kvar");
+                        System.out.println("Du har bara " + bacon.baconuses() + " baconanvändningar kvar");
 
                         bacon.uses--;
                         total += 100;
@@ -212,10 +222,10 @@ laga=0;
 
 
                 case 3 -> {
-                    if (sås.uses <= 0) {
+                    if (sås.uses <= i) {
                         System.out.println("Du har ingen mer sås");
                     } else {
-                        System.out.println("Du har bara " + sås.såsuses() + " kvar");
+                        System.out.println("Du har bara " + sås.såsuses() + " såsanvändningar kvar");
 
                         sås.uses--;
                         total += 80;
@@ -225,10 +235,10 @@ laga=0;
 
 
                 case 4 -> {
-                    if (ris.uses <= 0) {
+                    if (ris.uses <= i) {
                         System.out.println("Du har ingen mer ris");
                     } else {
-                        System.out.println("Du har bara " + ris.risuses() + " kvar");
+                        System.out.println("Du har bara " + ris.risuses() + " risanvändningar kvar");
 
                         ris.uses--;
                         total += 100;
@@ -238,10 +248,10 @@ laga=0;
 
 
                 case 5 -> {
-                    if (majs.uses <= 0) {
+                    if (majs.uses <= i) {
                         System.out.println("Du har ingen mer majs");
                     } else {
-                        System.out.println("Du har bara " + majs.majsuses() + " kvar");
+                        System.out.println("Du har bara " + majs.majsuses() + "majsanvändningar kvar");
 
                         majs.uses--;
                         total += 20;
@@ -254,7 +264,7 @@ laga=0;
                 case 6 -> {
                     laga =1;
 
-                    info = 0;
+                    info = i;
 
                 }
                 case 7 -> {
