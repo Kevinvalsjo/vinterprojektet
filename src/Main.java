@@ -43,7 +43,7 @@ public class Main {
 
             info=1;
             laga=2;
-
+//ingen av de tre while looparna kommer köras efter man sätter värdet på info och laga till de här
              }
 
         else{
@@ -52,7 +52,7 @@ public class Main {
         }
 
 while(laga!=2){//while loop som omfattar andra while loopar så att man alltid kan t.ex veta mer om en ingrediens oavsett om man har hoppat ur just den while loopen
-        while(info==i) {
+        while(info==i) {//while loop som används för att veta mer om ingredienser
 laga=0;
             if (svar.equalsIgnoreCase("ja"))
             {
@@ -189,7 +189,7 @@ laga=0;
 
 
 
-        while(laga==i) {
+        while(laga==i) {//while loop som handlar om att laga mat där man får reda på hur många gånger man kan anvämnda något och hur mycket kalorier maträtten innehåller
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta");
             svar1 = tangentbord.nextInt();
             switch (svar1) {
