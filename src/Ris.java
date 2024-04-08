@@ -8,14 +8,14 @@ public class Ris extends Ingredienser {
         this.uses = uses;
     }//konstruktor som tar in värden från objekt skapandet i main, Här sätts ris.location ris.kalorier och ris.uses.
 
-    public int risuses(){
+    public int uses(){
         return uses;
                         }//används för att printa ut hur många gånger någonting har använts
-    public int riskalo(){
+    public int kalo(){
 
         return kalorier;
                          }//används för att printa ut hur många kalorier
-    public String risplats() {
+    public String plats() {
         return location;
 
                              }//används för att printa ut platsen

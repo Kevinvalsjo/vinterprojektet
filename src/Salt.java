@@ -9,16 +9,16 @@ public class Salt extends Ingredienser {
         this.uses = uses;
     }
 
-    public int saltuses() {
+    public int uses() {
         return uses;
     }
 
-    public int saltkalo() {
+    public int kalo() {
 
         return kalorier;
     }
 
-    public String saltplats() {
+    public String plats() {
         return location;
 
     }

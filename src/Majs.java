@@ -7,13 +7,13 @@ public class Majs extends Ingredienser{
         this.uses = uses;
     }
 
-    public int majsuses(){
+    public int uses(){
         return uses;
     }
-    public int majskalo(){
+    public int kalo(){
 
         return kalorier;
-    }  public String majsplats() {
+    }  public String plats() {
         return location;
 
     }

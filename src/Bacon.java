@@ -8,15 +8,15 @@ public class Bacon extends Ingredienser{
 
         this.uses = uses;
     }
-    public int baconkalo(){
+    public int kalo(){
 
         return kalorier;
     }
-    public String baconplats(){
+    public String plats(){
         return location;
 
     }
-    public int baconuses(){
+    public int uses(){
         return uses;
     }
 

@@ -7,15 +7,15 @@ public class Sås extends Ingredienser{
         this.kalorier = kalo;
         this.uses = uses;
     }
-    public int såskalo(){
+    public int kalo(){
 
         return kalorier;
     }
-    public String såsplats(){
+    public String plats(){
         return location;
 
     }
-    public int såsuses(){
+    public int uses(){
         return uses;
     }
 
