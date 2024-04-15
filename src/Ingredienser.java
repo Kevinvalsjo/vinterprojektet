@@ -27,4 +27,6 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
     public abstract int kalo();
 
     public abstract String plats();
+
+    public abstract String uses();
 }

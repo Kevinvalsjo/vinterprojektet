@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="AGH">
-      <change afterPath="$PROJECT_DIR$/src/Brunsås.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vitlökssås.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dåligsås.java" afterDir="false" />
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="mer lösningar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bacon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bacon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ingredienser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ingredienser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Majs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Majs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ris.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Salt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Salt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sås.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +98,7 @@
       <workItem from="1710748185462" duration="783000" />
       <workItem from="1711532993597" duration="1675000" />
       <workItem from="1712558141350" duration="6195000" />
-      <workItem from="1713163008318" duration="3830000" />
+      <workItem from="1713163008318" duration="4333000" />
     </task>
     <task id="LOCAL-00001" summary="uh">
       <option name="closed" value="true" />
@@ -309,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712562213714</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="mer lösningar">
+      <option name="closed" value="true" />
+      <created>1713167045180</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1713167045180</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +327,7 @@
     <MESSAGE value="lagt till kommentarer" />
     <MESSAGE value="försöker fixa" />
     <MESSAGE value="AGH" />
-    <option name="LAST_COMMIT_MESSAGE" value="AGH" />
+    <MESSAGE value="mer lösningar" />
+    <option name="LAST_COMMIT_MESSAGE" value="mer lösningar" />
   </component>
 </project>

@@ -1,22 +1,25 @@
-public class Bacon extends Ingredienser{
+public class Bacon extends Ingredienser {
 
-
-    Bacon(String plats,int kalo, int uses){ super(uses);
-        this.location=plats;
+    Bacon(String plats, int kalo, int uses) {
+        super(uses);
+        this.location = plats;
 
         this.kalorier = kalo;
 
         this.uses = uses;
     }
-    public int kalo(){
+
+    public int kalo() {
 
         return kalorier;
     }
-    public String plats(){
+
+    public String plats() {
         return location;
 
     }
-    public int uses(){
+
+    public int uses() {
         return uses;
     }
 

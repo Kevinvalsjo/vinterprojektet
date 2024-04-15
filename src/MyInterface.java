@@ -80,26 +80,26 @@ public class MyInterface {
 
 
                         case 2 -> {
-                            /*
+                            ing = allaI.get("bacon");
                             System.out.println("Så du vill veta lite mer om bacon, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
                                 case 1 -> {
-                                    System.out.println("Den här produkten har " + bacon.kalo() + " kalorier ");
+                                    System.out.println("Den här produkten har " + ing.kalo() + " kalorier ");
 
                                 }
                                 case 2 -> {
-                                    System.out.println("Den här produkten kommer ifrån " + bacon.plats());
+                                    System.out.println("Den här produkten kommer ifrån " + ing.plats());
 
                                 }
                             }
 
-                             */
 
                         }
 
 
                         case 3 -> {
+                            ing = allaI.get("sås");
                             System.out.println("Så du vill veta lite mer om sås, spännande, det finns faktiskt 3 olika såser. Vilken vill du veta mer om? 1.Brunsås 2.Vitlökssås 3.dåligsås");
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
@@ -107,11 +107,11 @@ public class MyInterface {
                                     svar1 = tangentbord.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
-                                            System.out.println("Den här produkten har " + sås.kalo() + " kalorier");
+                                            System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
 
                                         }
                                         case 2 -> {
-                                            System.out.println("Den här produkten kommer ifrån " + sås.plats());
+                                            System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                         }
 
                                     }
@@ -124,7 +124,7 @@ public class MyInterface {
 
                                         }
                                         case 2 -> {
-                                            System.out.println("Den här produkten kommer ifrån " + sås.plats());
+                                            System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                         }
                                     }
                                 }
@@ -132,11 +132,11 @@ public class MyInterface {
                                     svar1 = tangentbord.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
-                                            System.out.println("Den här produkten har " + sås.kalo() + " kalorier");
+                                            System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
 
                                         }
                                         case 2 -> {
-                                            System.out.println("Den här produkten kommer ifrån " + sås.plats());
+                                            System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                         }
                                     }
                                 }
@@ -146,11 +146,11 @@ public class MyInterface {
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
                                 case 1 -> {
-                                    System.out.println("Den här produkten har " + sås.kalo() + " kalorier");
+                                    System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
 
                                 }
                                 case 2 -> {
-                                    System.out.println("Den här produkten kommer ifrån " + sås.plats());
+                                    System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                 }
                             }
 
@@ -159,35 +159,37 @@ public class MyInterface {
 
 
                         case 4 -> {
+                            ing = allaI.get("ris");
                             System.out.println("Så du vill veta lite mer om Ris, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
 
                                 case 1 -> {
-                                    System.out.println("Den här produkten har " + ris.kalo() + " kalorier");
+                                    System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
 
                                 }
                                 case 2 -> {
-                                    System.out.println("Den här produkten kommer ifrån " + ris.plats());
+                                    System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                 }
                             }
                         }
 
 
                         case 5 -> {
+                            ing = allaI.get("majs");
                             System.out.println("Så du vill veta lite mer om Majs, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
 
 
                                 case 1 -> {
-                                    System.out.println("Den här produkten har " + majs.kalo() + " kalorier");
+                                    System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
 
                                 }
 
 
                                 case 2 -> {
-                                    System.out.println("Den här produkten kommer ifrån " + majs.plats());
+                                    System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                 }
                             }
                         }
@@ -219,39 +221,40 @@ public class MyInterface {
                     }
 
 
-                   /* case 2 -> {
-                        p=bacon.uses();
-                        Ingredienser ingredienser = new Ingredienser(p);
-                        ingredienser.mat();
+                    case 2 -> {
+                        ing = allaI.get("bacon");
+
+                        ing.mat();
+
                     }
 
 
                     case 3 -> {
 
-                        p=sås.uses();
-                        Ingredienser ingredienser = new Ingredienser(p);
-                        ingredienser.mat();
+                        ing = allaI.get("sås");
+
+                        ing.mat();
 
 
                     }
 
 
                     case 4 -> {
-                        p=salt.uses();
-                        Ingredienser ingredienser = new Ingredienser(p);
-                        ingredienser.mat();
+                        ing = allaI.get("majs");
+
+                        ing.mat();
+
 
                     }
 
 
                     case 5 -> {
-                        p=ris.uses();
-                        Ingredienser ingredienser = new Ingredienser(p);
-                        ingredienser.mat();
+                        ing = allaI.get("ris");
+
+                        ing.mat();
+
 
                     }
-
-                    */
 
 
                     case 6 -> {
