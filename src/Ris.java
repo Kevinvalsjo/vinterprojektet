@@ -1,6 +1,7 @@
 public class Ris extends Ingredienser {
 
     Ris(String plats,int kalo, int uses){
+        super(uses);
         this.location=plats;
 
         this.kalorier = kalo;

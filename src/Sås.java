@@ -1,7 +1,7 @@
 public class Sås extends Ingredienser{
 
 
-    Sås(String plats,int kalo,int uses){
+    Sås(String plats,int kalo,int uses){ super(uses);
         this.location=plats;
 
         this.kalorier = kalo;

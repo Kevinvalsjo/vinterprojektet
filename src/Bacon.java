@@ -1,7 +1,7 @@
 public class Bacon extends Ingredienser{
 
 
-    Bacon(String plats,int kalo, int uses){
+    Bacon(String plats,int kalo, int uses){ super(uses);
         this.location=plats;
 
         this.kalorier = kalo;

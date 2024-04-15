@@ -1,19 +1,24 @@
-public class Majs extends Ingredienser{
-    Majs(String plats,int kalo, int uses){
-        this.location=plats;
+public class Majs extends Ingredienser {
+    Majs(String plats, int kalo, int uses) {
+        super(uses);
+        this.location = plats;
 
         this.kalorier = kalo;
 
         this.uses = uses;
     }
 
-    public int uses(){
+    public int uses() {
         return uses;
     }
-    public int kalo(){
+
+    @Override
+    public int kalo() {
 
         return kalorier;
-    }  public String plats() {
+    }
+
+    public String plats() {
         return location;
 
     }

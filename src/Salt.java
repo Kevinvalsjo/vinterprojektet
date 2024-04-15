@@ -1,7 +1,7 @@
 public class Salt extends Ingredienser {
 
 
-    Salt(String plats, int kalo, int uses) {
+    Salt(String plats, int kalo, int uses) { super(uses);
         this.location = plats;
 
         this.kalorier = kalo;
