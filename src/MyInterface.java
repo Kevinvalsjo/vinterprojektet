@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MyInterface {
     HashMap<String, Ingredienser> allaI = new HashMap<>();
     Ingredienser ing;
-
+    int Total;
     int i = 0;
     int svar1 = i;
     String svar;
@@ -20,7 +20,6 @@ public class MyInterface {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
 
         Scanner tangentbord = new Scanner(System.in);
-
         Bacon bacon;
         allaI.put("dåligsås", new dåligsås("Spanien", 10, 10));
         allaI.put("vitlökssås", new Vitlökssås("Spanien", 10, 2));
@@ -224,45 +223,34 @@ public class MyInterface {
 
                     case 1 -> {
                         ing = allaI.get("salt");
-
-                        ing.mat();
-
+                        Total += ing.mat();
                     }
 
 
                     case 2 -> {
                         ing = allaI.get("bacon");
-
-                        ing.mat();
-
+                        Total += ing.mat();
                     }
 
 
                     case 3 -> {
 
                         ing = allaI.get("sås");
-
-                        ing.mat();
-
-
+                        Total += ing.mat();
                     }
 
 
                     case 4 -> {
-                        ing = allaI.get("majs");
+                        ing = allaI.get("ris");
 
-                        ing.mat();
-
-
+                        Total += ing.mat();
                     }
 
 
                     case 5 -> {
-                        ing = allaI.get("ris");
+                        ing = allaI.get("majs");
 
-                        ing.mat();
-
-
+                        Total += ing.mat();
                     }
 
 
@@ -273,7 +261,7 @@ public class MyInterface {
 
                     }
                     case 7 -> {
-                        System.out.println("Din maträtt har " + total + " kalorier");
+                        System.out.println("Din maträtt har " + Total + " kalorier");
                         laga = 2;
 
                     }

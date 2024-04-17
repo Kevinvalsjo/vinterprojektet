@@ -9,7 +9,7 @@ public class Ris extends Ingredienser {
         this.uses = uses;
     }//konstruktor som tar in värden från objekt skapandet i main, Här sätts ris.location ris.kalorier och ris.uses.
 
-    @Override
+
     public int uses() {
         return uses;
     }//används för att printa ut hur många gånger någonting har använts

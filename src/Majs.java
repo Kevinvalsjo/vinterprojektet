@@ -12,7 +12,7 @@ public class Majs extends Ingredienser {
         return uses;
     }
 
-    @Override
+
     public int kalo() {
 
         return kalorier;
