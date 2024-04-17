@@ -1,24 +1,27 @@
-public class Sås extends Ingredienser{
+public class Sås extends Ingredienser {
 
 
-    Sås(String plats,int kalo,int uses){ super(uses);
-        this.location=plats;
+    Sås(String plats, int kalo, int uses) {
+        super(uses);
+        this.location = plats;
 
         this.kalorier = kalo;
         this.uses = uses;
     }
-    public int kalo(){
+
+    public int kalo() {
 
         return kalorier;
     }
-    public String plats(){
+
+    public String plats() {
         return location;
 
     }
-    public int uses(){
+
+    public int uses() {
         return uses;
     }
-
 
 
 }

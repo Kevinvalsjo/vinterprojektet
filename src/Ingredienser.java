@@ -19,6 +19,7 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
             System.out.println("Du har bara " + uses + " användningar kvar");
 
             System.out.println("Du har lagt i och kalorierna av soppan har gått upp till ");
+            uses--;
 
         }
 
@@ -28,5 +29,6 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
 
     public abstract String plats();
 
-    public abstract String uses();
+    public abstract int uses();
+
 }

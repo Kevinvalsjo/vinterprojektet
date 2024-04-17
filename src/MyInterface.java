@@ -22,9 +22,12 @@ public class MyInterface {
         Scanner tangentbord = new Scanner(System.in);
 
         Bacon bacon;
-        Sås sås = new Sås("Spanien", 50, 50);
-        Ris ris = new Ris("Kina", 100, 5);
-        Majs majs = new Majs("Argentina", 20, 10);
+        allaI.put("dåligsås", new dåligsås("Spanien", 10, 10));
+        allaI.put("vitlökssås", new Vitlökssås("Spanien", 10, 2));
+        allaI.put("brunsås", new Brunsås("Spanien", 10, 5));
+        allaI.put("sås", new Sås("Spanien", 50, 50));
+        allaI.put("ris", new Ris("Kina", 100, 5));
+        allaI.put("majs", new Majs("Argentina", 20, 10));
         allaI.put("salt", new Salt("Uganda", 3, 10));
         allaI.put("bacon", new Bacon("Danmark", 80, 20));
 
@@ -104,6 +107,8 @@ public class MyInterface {
                             svar1 = tangentbord.nextInt();
                             switch (svar1) {
                                 case 1 -> {
+                                    System.out.println("Så du vill veta lite mer om brunsåsen? 1.Kalorier 2.Plats");
+                                    ing = allaI.get("brunsås");
                                     svar1 = tangentbord.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
@@ -117,6 +122,8 @@ public class MyInterface {
                                     }
                                 }
                                 case 2 -> {
+                                    System.out.println("Så du vill veta lite mer om vitlökssåsen? 1.Kalorier 2.Plats");
+                                    ing = allaI.get("vitlökssås");
                                     svar1 = tangentbord.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
@@ -129,6 +136,8 @@ public class MyInterface {
                                     }
                                 }
                                 case 3 -> {
+                                    ing = allaI.get("dåligsås");
+                                    System.out.println("Så du vill veta lite mer om såsen som smakar jättedåligt? 1.Kalorier 2.Plats");
                                     svar1 = tangentbord.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
@@ -143,7 +152,7 @@ public class MyInterface {
                             }
 
 
-                            svar1 = tangentbord.nextInt();
+                          /*  svar1 = tangentbord.nextInt();
                             switch (svar1) {
                                 case 1 -> {
                                     System.out.println("Den här produkten har " + ing.kalo() + " kalorier");
@@ -152,7 +161,7 @@ public class MyInterface {
                                 case 2 -> {
                                     System.out.println("Den här produkten kommer ifrån " + ing.plats());
                                 }
-                            }
+                            }*/
 
 
                         }
