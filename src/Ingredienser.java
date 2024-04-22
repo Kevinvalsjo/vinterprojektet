@@ -16,19 +16,19 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
             System.out.println("Du har inte mer");
         } else {
             System.out.println("Du har bara " + uses + " användningar kvar");
-            total += kalo();
+            total += getkalo();
             uses--;
-            System.out.println("Du har lagt i någonting och kalorierna av soppan har gått upp till " + total);
+            System.out.println("Du har lagt i totalt " + total + " av den här ingrediensen ");
 
 
         }
         return total;
     }
 
-    public abstract int kalo();
+    public abstract int getkalo();
 
-    public abstract String plats();
+    public abstract String getlocation();
 
-    public abstract int uses();
+    public abstract int getuses();
 
 }

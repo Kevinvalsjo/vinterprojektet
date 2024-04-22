@@ -1,7 +1,7 @@
 public class dåligsås extends Sås {
-    dåligsås(String plats, int kalo, int uses) {
-        super(plats, kalo, uses);
-        this.location = plats;
+    dåligsås(String location, int kalo, int uses) {
+        super(location, kalo, uses);
+        this.location = location;
 
         this.kalorier = kalo;
         this.uses = uses;

@@ -1,7 +1,7 @@
 public class Vitlökssås extends Sås {
-    Vitlökssås(String plats, int kalo, int uses) {
-        super(plats, kalo, uses);
-        this.location = plats;
+    Vitlökssås(String location, int kalo, int uses) {
+        super(location, kalo, uses);
+        this.location = location;
         this.kalorier = kalo;
         this.uses = uses;
     }

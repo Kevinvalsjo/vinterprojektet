@@ -1,8 +1,7 @@
 public class Ris extends Ingredienser {
-
-    Ris(String plats, int kalo, int uses) {
+    Ris(String location, int kalo, int uses) {
         super(uses);
-        this.location = plats;
+        this.location = location;
 
         this.kalorier = kalo;
 
@@ -10,16 +9,16 @@ public class Ris extends Ingredienser {
     }//konstruktor som tar in värden från objekt skapandet i main, Här sätts ris.location ris.kalorier och ris.uses.
 
 
-    public int uses() {
+    public int getuses() {
         return uses;
     }//används för att printa ut hur många gånger någonting har använts
 
-    public int kalo() {
+    public int getkalo() {
 
         return kalorier;
     }//används för att printa ut hur många kalorier
 
-    public String plats() {
+    public String getlocation() {
         return location;
 
     }//används för att printa ut platsen
