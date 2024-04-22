@@ -10,17 +10,4 @@ public class Salt extends Ingredienser {
         this.uses = uses;
     }
 
-    public int getuses() {
-        return uses;
-    }
-
-    public int getkalo() {
-
-        return kalorier;
-    }
-
-    public String getlocation() {
-        return location;
-
-    }
 }

@@ -4,6 +4,18 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
     protected int uses;//hur många gånger man kan använda en ingrediens
     private int total;
 
+    public int getkalo() {
+        return kalorier;
+    }
+
+    public String getlocation() {
+        return location;
+    }
+
+    public int getuses() {
+        return uses;
+    }
+
     Ingredienser(int uses) {
         this.uses = uses;
     }
@@ -12,7 +24,7 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
     public int mat() {
 
         if (uses <= 0) {
-
+            total = 0;
             System.out.println("Du har inte mer");
         } else {
             System.out.println("Du har bara " + uses + " användningar kvar");
@@ -25,10 +37,10 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
         return total;
     }
 
-    public abstract int getkalo();
+    // public abstract int getkalo();
 
-    public abstract String getlocation();
+    //public abstract String getlocation();
 
-    public abstract int getuses();
+    //public abstract int getuses();
 
 }

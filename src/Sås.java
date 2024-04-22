@@ -10,19 +10,5 @@ public class Sås extends Ingredienser {
         this.uses = uses;
     }
 
-    public int getkalo() {
-
-        return kalorier;
-    }
-
-    public String getlocation() {
-        return location;
-
-    }
-
-    public int getuses() {
-        return uses;
-    }
-
 
 }

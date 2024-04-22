@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="nästan">
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="går inte att krascha programmet lika lätt nu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Bacon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bacon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brunsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brunsås.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ingredienser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ingredienser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Majs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Majs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ris.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Salt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Salt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sås.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vitlökssås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vitlökssås.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dåligsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dåligsås.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <workItem from="1712558141350" duration="6195000" />
       <workItem from="1713163008318" duration="4410000" />
       <workItem from="1713340921373" duration="3839000" />
-      <workItem from="1713349029195" duration="5018000" />
+      <workItem from="1713349029195" duration="7680000" />
     </task>
     <task id="LOCAL-00001" summary="uh">
       <option name="closed" value="true" />
@@ -342,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713344790784</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="går inte att krascha programmet lika lätt nu">
+      <option name="closed" value="true" />
+      <created>1713770880848</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713770880848</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +369,7 @@
     <MESSAGE value="mer lösningar" />
     <MESSAGE value="ö" />
     <MESSAGE value="nästan" />
-    <option name="LAST_COMMIT_MESSAGE" value="nästan" />
+    <MESSAGE value="går inte att krascha programmet lika lätt nu" />
+    <option name="LAST_COMMIT_MESSAGE" value="går inte att krascha programmet lika lätt nu" />
   </component>
 </project>

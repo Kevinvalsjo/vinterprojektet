@@ -19,7 +19,7 @@ public class MyInterface {
 
     public MyInterface() {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
-
+        int[] total = new int[7];
         Scanner tangentbord = new Scanner(System.in);
         Bacon bacon;
         allaI.put("dåligsås", new dåligsås("Spanien", 10, 10));
@@ -33,6 +33,10 @@ public class MyInterface {
 
 //skapar objekt för ingredienserna och anger dess egenskaper
 
+        for (int r = 0; r < 7; r++) {
+            total[r] = 0;
+
+        }
         System.out.println("Vill du laga mat? (Ja/Nej)");
         svar2 = tangentbord.next();
 
@@ -292,34 +296,36 @@ public class MyInterface {
 
                     case 1 -> {
                         ing = allaI.get("salt");
-                        Total += ing.mat();
+
+                        total[1] = ing.mat();
                     }
 
 
                     case 2 -> {
                         ing = allaI.get("bacon");
-                        Total += ing.mat();
+                        total[2] = ing.mat();
                     }
 
 
                     case 3 -> {
 
                         ing = allaI.get("sås");
-                        Total += ing.mat();
+                        total[3] = ing.mat();
                     }
 
 
                     case 4 -> {
                         ing = allaI.get("ris");
 
-                        Total += ing.mat();
+                        total[4] = ing.mat();
                     }
 
 
                     case 5 -> {
                         ing = allaI.get("majs");
 
-                        Total += ing.mat();
+                        total[5] = ing.mat();
+
                     }
 
 
@@ -330,7 +336,8 @@ public class MyInterface {
 
                     }
                     case 7 -> {
-                        System.out.println("Din maträtt har " + Total + " kalorier");
+                        int totalen = total[1] + total[2] + total[3] + total[4] + total[5];
+                        System.out.println("Din maträtt har " + totalen + " kalorier");
                         laga = 2;
 
                     }
@@ -341,26 +348,30 @@ public class MyInterface {
 
 
         }
-/*
+        System.out.println("Du har " + total[1] + " kalorier salt");
+        System.out.println("Du har " + total[2] + " kalorier bacon");
+        System.out.println("Du har " + total[3] + " kalorier sås");
+        System.out.println("Du har " + total[4] + " kalorier ris");
+        System.out.println("Du har " + total[5] + " kalorier majs");
+        tangentbord.next();
         System.out.println("Vill du dricka saltet?");
         svar = tangentbord.next();
-        bacon.bacons();
-        if(svar.equalsIgnoreCase("ja"))
-        {salt.drink();
+        if (svar.equalsIgnoreCase("ja")) {
             System.out.println("Varför dricker du saltet är du dum i huvet");
-        svar = tangentbord.next();
-        if(svar.equalsIgnoreCase("ja"))
-                     {
-            System.out.println("Jag skulle rekommendera att inte dricka saltet");
             svar = tangentbord.next();
-            if(svar.equalsIgnoreCase("hej") ){
-                System.out.println("Vill du ha såsen");
+            if (svar.equalsIgnoreCase("ja")) {
+                System.out.println("Jag skulle rekommendera att inte dricka saltet");
+                svar = tangentbord.next();
+                if (svar.equalsIgnoreCase("hej")) {
+                    System.out.println("Vill du ha såsen");
 
-                    }
+                }
+            }
         }
-    }
 
- */
+
         System.out.println("Hejdå!!!");
     }
+
+
 }
