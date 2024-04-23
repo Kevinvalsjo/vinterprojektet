@@ -25,7 +25,7 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
 
         if (uses <= 0) {
             total = 0;
-            System.out.println("Du har inte mer");
+            System.out.println("Du blev så arg för att du inte hade mer av denna och kastade kastrullen ut igenom fönstret och förlorade alla ingredienser du hade lagt i");
         } else {
             System.out.println("Du har bara " + uses + " användningar kvar");
             total += getkalo();
