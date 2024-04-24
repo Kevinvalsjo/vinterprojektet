@@ -3,9 +3,14 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
     protected int kalorier;//hur många kalorier i en ignrediens
     protected int uses;//hur många gånger man kan använda en ingrediens
     private int total;
+    protected int grader;
 
     public int getkalo() {
         return kalorier;
+    }
+
+    public int getgrader() {
+        return grader;
     }
 
     public String getlocation() {

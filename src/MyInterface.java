@@ -6,7 +6,9 @@ public class MyInterface {
     HashMap<String, Ingredienser> allaI = new HashMap<>();
     Ingredienser ing;
     int eat;
+    int värma;
     int Total;
+    int värme;
     int i = 0;
     int svar1 = i;
     String svar;
@@ -21,16 +23,16 @@ public class MyInterface {
     public MyInterface() {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
         int[] total = new int[7];
-        Scanner tangentbord = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         Bacon bacon;
-        allaI.put("dåligsås", new dåligsås("Bermuda Triangeln", 10, 10));
-        allaI.put("vitlökssås", new Vitlökssås("Spanien", 10, 2));
-        allaI.put("brunsås", new Brunsås("Antarktis", 10, 5));
-        allaI.put("sås", new Sås("Spanien", 50, 50));
-        allaI.put("ris", new Ris("Kina", 100, 5));
-        allaI.put("majs", new Majs("Argentina", 20, 10));
-        allaI.put("salt", new Salt("Uganda", 3, 10));
-        allaI.put("bacon", new Bacon("Danmark", 80, 20));
+        allaI.put("dåligsås", new dåligsås("Bermuda Triangeln", 10, 10, 30));
+        allaI.put("vitlökssås", new Vitlökssås("Spanien", 10, 3, 150));
+        allaI.put("brunsås", new Brunsås("Antarktis", 10, 5, 40));
+        allaI.put("sås", new Sås("Spanien", 50, 50, 30));
+        allaI.put("ris", new Ris("Kina", 100, 5, 70));
+        allaI.put("majs", new Majs("Argentina", 20, 10, 2000));
+        allaI.put("salt", new Salt("Uganda", 3, 10, 150));
+        allaI.put("bacon", new Bacon("Danmark", 80, 20, 200));
 
 //skapar objekt för ingredienserna och anger dess egenskaper
 
@@ -39,12 +41,12 @@ public class MyInterface {
 
         }
         System.out.println("Vill du laga mat? (Ja/Nej)");
-        svar2 = tangentbord.next();
+        svar2 = input.next();
 
         while (!"ja".equalsIgnoreCase(svar2) && !"nej".equalsIgnoreCase(svar2)) {
 
             System.out.println("Du måste skriva 'ja' eller 'nej'");
-            svar2 = tangentbord.next();
+            svar2 = input.next();
 
         }//körs tills användaren skriver rätt,
 
@@ -56,11 +58,11 @@ public class MyInterface {
 //ingen av de tre while looparna kommer köras efter man sätter värdet på info och laga till de här
         } else {
             System.out.println("Tjenare du där borta innan vi börjar laga mat, skulle du vilja veta lite om ingredienserna som du kan välja?(Ja/Nej)");
-            svar2 = tangentbord.next();
+            svar2 = input.next();
             while (!"ja".equalsIgnoreCase(svar2) && !"nej".equalsIgnoreCase(svar2)) {
 
                 System.out.println("Du måste skriva 'ja' eller 'nej'");
-                svar2 = tangentbord.next();
+                svar2 = input.next();
 
             }
         }
@@ -70,12 +72,12 @@ public class MyInterface {
             while (info == i) {//while loop som används för att veta mer om ingredienser
                 if (svar2.equalsIgnoreCase("ja")) {
                     System.out.println("Vilken ingrediens är du intresserad av? 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
-                    svar = tangentbord.next();
+                    svar = input.next();
 
                     while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar) && !"3".equalsIgnoreCase(svar) && !"4".equalsIgnoreCase(svar) && !"5".equalsIgnoreCase(svar) && !"6".equalsIgnoreCase(svar)) {
 
                         System.out.println("Du måste skriva en siffra i intervallet 1-6");
-                        svar = tangentbord.next();
+                        svar = input.next();
 
                     }
 
@@ -86,12 +88,12 @@ public class MyInterface {
                         case 1 -> {
                             ing = allaI.get("salt");
                             System.out.println("Så du vill veta lite mer om salt, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
-                            svar = tangentbord.next();
+                            svar = input.next();
 
                             while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                 System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                svar = tangentbord.next();
+                                svar = input.next();
 
                             }
 
@@ -113,12 +115,12 @@ public class MyInterface {
                         case 2 -> {
                             ing = allaI.get("bacon");
                             System.out.println("Så du vill veta lite mer om bacon, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
-                            svar = tangentbord.next();
+                            svar = input.next();
 
                             while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                 System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                svar = tangentbord.next();
+                                svar = input.next();
 
                             }
 
@@ -141,12 +143,12 @@ public class MyInterface {
                         case 3 -> {
                             ing = allaI.get("sås");
                             System.out.println("Så du vill veta lite mer om sås, spännande, det finns faktiskt 3 olika såser. Vilken vill du veta mer om? 1.Brunsås 2.Vitlökssås 3.dåligsås");
-                            svar = tangentbord.next();
+                            svar = input.next();
 
                             while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar) && !"3".equalsIgnoreCase(svar)) {
 
                                 System.out.println("Du måste skriva en siffra i intervallet 1-3");
-                                svar = tangentbord.next();
+                                svar = input.next();
 
                             }
 
@@ -155,7 +157,7 @@ public class MyInterface {
                                 case 1 -> {
                                     System.out.println("Så du vill veta lite mer om brunsåsen? 1.Kalorier 2.Plats");
                                     ing = allaI.get("brunsås");
-                                    svar1 = tangentbord.nextInt();
+                                    svar1 = input.nextInt();
                                     switch (svar1) {
                                         case 1 -> {
                                             System.out.println("Den här produkten har " + ing.getkalo() + " kalorier");
@@ -170,12 +172,12 @@ public class MyInterface {
                                 case 2 -> {
                                     System.out.println("Så du vill veta lite mer om vitlökssåsen? 1.Kalorier 2.Plats");
                                     ing = allaI.get("vitlökssås");
-                                    svar = tangentbord.next();
+                                    svar = input.next();
 
                                     while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                         System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                        svar = tangentbord.next();
+                                        svar = input.next();
 
                                     }
 
@@ -193,12 +195,12 @@ public class MyInterface {
                                 case 3 -> {
                                     ing = allaI.get("dåligsås");
                                     System.out.println("Så du vill veta lite mer om såsen som smakar jättedåligt? 1.Kalorier 2.Plats");
-                                    svar = tangentbord.next();
+                                    svar = input.next();
 
                                     while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                         System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                        svar = tangentbord.next();
+                                        svar = input.next();
 
                                     }
 
@@ -220,12 +222,12 @@ public class MyInterface {
                         case 4 -> {
                             ing = allaI.get("ris");
                             System.out.println("Så du vill veta lite mer om Ris, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
-                            svar = tangentbord.next();
+                            svar = input.next();
 
                             while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                 System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                svar = tangentbord.next();
+                                svar = input.next();
 
                             }
 
@@ -246,12 +248,12 @@ public class MyInterface {
                         case 5 -> {
                             ing = allaI.get("majs");
                             System.out.println("Så du vill veta lite mer om Majs, spännande, Vill du veta 1.Kalorier eller 2.Plats?");
-                            svar = tangentbord.next();
+                            svar = input.next();
 
                             while (!"1".equalsIgnoreCase(svar) && !"2".equalsIgnoreCase(svar)) {
 
                                 System.out.println("Du måste skriva en siffra i intervallet 1-2");
-                                svar = tangentbord.next();
+                                svar = input.next();
 
                             }
 
@@ -291,7 +293,7 @@ public class MyInterface {
 
             while (laga == i) {//while loop som handlar om att laga mat där man får reda på hur många gånger man kan anvämnda något och hur mycket kalorier maträtten innehåller
                 System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta, Om du får slut på en ingrediens kommer du bli riktigt arg");
-                svar1 = tangentbord.nextInt();
+                svar1 = input.nextInt();
                 switch (svar1) {
 
 
@@ -354,9 +356,123 @@ public class MyInterface {
         System.out.println("Du har " + total[3] + " kalorier sås");
         System.out.println("Du har " + total[4] + " kalorier ris");
         System.out.println("Du har " + total[5] + " kalorier majs");
+
+
+        System.out.println("Nu är det då dags att sätta på spisen, Vill du veta lite om ingrediensernas gradtålighet innan du börjar ja/nej");
+        svar = input.next();
+        while (!"ja".equalsIgnoreCase(svar) && !"nej".equalsIgnoreCase(svar)) {
+
+            System.out.println("Du måste skriva 'ja' eller 'nej'");
+            svar = input.next();
+        }
+        boolean san = svar.equalsIgnoreCase("ja");
+        if (san = true) {
+            while (san == true) {
+                System.out.println("Okej Vilken vill du veta mer om 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
+                svar1 = input.nextInt();
+                switch (svar1) {
+                    case 1 -> {
+                        ing = allaI.get("salt");
+                        System.out.println("Den här ingrediensen kommer dö vid temperaturen  " + ing.getgrader() + " grader");
+
+                    }
+
+
+                    case 2 -> {
+                        ing = allaI.get("bacon");
+                        System.out.println("Den här ingrediensen kommer dö vid temperaturen " + ing.getgrader() + " grader");
+
+                    }
+
+
+                    case 3 -> {
+                        ing = allaI.get("sås");
+                        System.out.println("Den här ingrediensen kommer dö vid temperaturen" + ing.getgrader() + "grader");
+
+
+                    }
+
+
+                    case 4 -> {
+                        ing = allaI.get("ris");
+                        System.out.println("Den här ingrediensen kommer dö vid temperaturen  " + ing.getgrader() + " grader");
+
+
+                    }
+
+
+                    case 5 -> {
+                        ing = allaI.get("majs");
+                        System.out.println("Den här ingrediensen kommer dö vid temperaturen  " + ing.getgrader() + " grader");
+
+                    }
+
+
+                    case 6 -> {
+                        laga = 1;
+
+                        info = i;
+                        san = false;
+                    }
+                }
+            }
+        } else {
+            System.out.println("Taskigt");
+        }
+        System.out.println("Nu är det dags att dra på värmen,För att starta värmning skriv 1,För att stoppa värmning skriv 2,");
+        svar1 = input.nextInt();
+        switch (svar1) {
+
+            case 1 -> {
+
+                ing = allaI.get("sås");
+                while (värme <= 2000 || värma == 0) {
+                    for (int r = 0; r < 2000; r++) {
+                        värme = r;
+
+
+                        if (värme == ing.getgrader()) {
+                            System.out.println("Såsen dog men vem bryr sig");
+                            ing = allaI.get("ris");
+                        }
+                        if (värme == ing.getgrader()) {
+                            System.out.println("Blev det risgrynsgröt? riset dör");
+                            ing = allaI.get("salt");
+                        }
+                        if (värme == ing.getgrader()) {
+                            System.out.println("o nej salten dö:(");
+                            ing = allaI.get("bacon");
+                        }
+                        if (värme == ing.getgrader()) {
+                            System.out.println("o nej bacon dö:(");
+                            ing = allaI.get("majs");
+                        }
+
+
+                        if (värme == ing.getgrader()) {
+                            System.out.println("Din sista ingrediens dog, nu da?");
+
+                        }
+                        System.out.println(värme);
+                        for (int a = 0; a < 500000000; a++) {
+
+                        }
+
+                    }
+                }
+            }
+
+
+            case 2 -> {
+                värma = 1;
+
+            }
+
+        }
+
         while (eat == 0) {
             System.out.println("Vad vill du göra med din maträtt 1.Äta upp bacon 2.dricka saltet? 3.Dricka såsen 4.Äta ris 5.Äta majs.6.avslut");
-            svar1 = tangentbord.nextInt();
+            svar1 = input.nextInt();
             switch (svar1) {
                 case 1 -> {
 
@@ -367,8 +483,8 @@ public class MyInterface {
 
                 case 2 -> {
 
-                    System.out.println("Varför dricker du saltet är du dum i huvet");
-                    svar = tangentbord.next();
+                    System.out.println("Varför dricker du saltet är du dum i huvet Ja/Nej");
+                    svar = input.next();
                     if (svar.equalsIgnoreCase("ja")) {
                         System.out.println("Jag skulle rekommendera att inte dricka saltet");
                     }

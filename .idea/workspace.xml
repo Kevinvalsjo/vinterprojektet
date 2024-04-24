@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="förenklat">
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="nu kan man äta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bacon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bacon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Brunsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brunsås.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ingredienser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ingredienser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Majs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Majs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ris.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ris.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Salt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Salt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sås.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vitlökssås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vitlökssås.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dåligsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dåligsås.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +69,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/kevin.valsjo/ProjektProgam/Vinterprojekto/src/Main.java&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -101,7 +109,8 @@
       <workItem from="1712558141350" duration="6195000" />
       <workItem from="1713163008318" duration="4410000" />
       <workItem from="1713340921373" duration="3839000" />
-      <workItem from="1713349029195" duration="9389000" />
+      <workItem from="1713349029195" duration="10398000" />
+      <workItem from="1713868162161" duration="5181000" />
     </task>
     <task id="LOCAL-00001" summary="uh">
       <option name="closed" value="true" />
@@ -351,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713779872596</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="nu kan man äta">
+      <option name="closed" value="true" />
+      <created>1713863037876</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1713863037876</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +392,7 @@
     <MESSAGE value="nästan" />
     <MESSAGE value="går inte att krascha programmet lika lätt nu" />
     <MESSAGE value="förenklat" />
-    <option name="LAST_COMMIT_MESSAGE" value="förenklat" />
+    <MESSAGE value="nu kan man äta" />
+    <option name="LAST_COMMIT_MESSAGE" value="nu kan man äta" />
   </component>
 </project>
