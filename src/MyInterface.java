@@ -24,13 +24,12 @@ public class MyInterface {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
         int[] total = new int[7];
         Scanner input = new Scanner(System.in);
-        Bacon bacon;
-        allaI.put("dåligsås", new dåligsås("Bermuda Triangeln", 10, 10, 30));
-        allaI.put("vitlökssås", new Vitlökssås("Spanien", 10, 3, 150));
-        allaI.put("brunsås", new Brunsås("Antarktis", 10, 5, 40));
+        allaI.put("dåligsås", new dåligsås());
+        allaI.put("brunsås", new Brunsås());
+        allaI.put("vitlökssås", new Vitlökssås());
         allaI.put("sås", new Sås("Spanien", 50, 50, 30));
         allaI.put("ris", new Ris("Kina", 100, 5, 70));
-        allaI.put("majs", new Majs("Argentina", 20, 10, 2000));
+        allaI.put("majs", new Majs("Argentina", 20, 10, 250));
         allaI.put("salt", new Salt("Uganda", 3, 10, 150));
         allaI.put("bacon", new Bacon("Danmark", 80, 20, 200));
 
@@ -366,7 +365,7 @@ public class MyInterface {
             svar = input.next();
         }
         boolean san = svar.equalsIgnoreCase("ja");
-        if (san = true) {
+        if (san == true) {
             while (san == true) {
                 System.out.println("Okej Vilken vill du veta mer om 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
                 svar1 = input.nextInt();
@@ -426,40 +425,66 @@ public class MyInterface {
             case 1 -> {
 
                 ing = allaI.get("sås");
-                while (värme <= 2000 || värma == 0) {
-                    for (int r = 0; r < 2000; r++) {
-                        värme = r;
+
+                for (int r = 0; r < 2000; r++) {
+                    värme = r;
+
+                    if (värme == ing.getgrader() && k == 0) {
+                        System.out.println("Såsen brände fast");
+                        input.nextLine();
+                        input.nextLine();
+                        ing = allaI.get("ris");
+
+                        k = 1;
+
+                    }
+                    if (värme == ing.getgrader() && k == 1) {
+                        System.out.println("Riset brände fast (Enter)");
+                        input.nextLine();
+                        ing = allaI.get("salt");
+
+                        k = 2;
+
+                    }
+                    if (värme == ing.getgrader() && k == 2) {
+                        System.out.println("Saltet brändes(Enter)");
+                        input.nextLine();
+                        input.nextLine();
+
+                        ing = allaI.get("bacon");
+                        k = 3;
+                    }
+                    if (värme == ing.getgrader() && k == 3) {
+                        System.out.println("Bacon brändes (Enter)");
+                        input.nextLine();
+                        ing = allaI.get("majs");
+
+                        k = 4;
+                    }
+
+                    if (värme == ing.getgrader() && k == 4) {
+                        System.out.println("Din sista ingrediens brändes, nu da?");
+                        input.nextLine();
+                        input.nextLine();
 
 
-                        if (värme == ing.getgrader()) {
-                            System.out.println("Såsen dog men vem bryr sig");
-                            ing = allaI.get("ris");
-                        }
-                        if (värme == ing.getgrader()) {
-                            System.out.println("Blev det risgrynsgröt? riset dör");
-                            ing = allaI.get("salt");
-                        }
-                        if (värme == ing.getgrader()) {
-                            System.out.println("o nej salten dö:(");
-                            ing = allaI.get("bacon");
-                        }
-                        if (värme == ing.getgrader()) {
-                            System.out.println("o nej bacon dö:(");
-                            ing = allaI.get("majs");
-                        }
+                    }
+                    System.out.println(värme);
+                    for (int a = 0; a < 60000000; a++) {
 
+                    }
+                    if (värme == 100 || värme == 200 || värme == 300 || värme == 400 || värme == 500 || värme == 600 || värme == 700 || värme == 800 || värme == 900 || värme == 1000) {
+                        System.out.println("Vill du forsätta värma upp? Ja/Nej");
+                        svar = input.next();
+                        if ("nej".equalsIgnoreCase(svar)) {
+                            r = 2001;
 
-                        if (värme == ing.getgrader()) {
-                            System.out.println("Din sista ingrediens dog, nu da?");
-
-                        }
-                        System.out.println(värme);
-                        for (int a = 0; a < 500000000; a++) {
 
                         }
 
                     }
                 }
+
             }
 
 
@@ -476,18 +501,16 @@ public class MyInterface {
             switch (svar1) {
                 case 1 -> {
 
-                    System.out.println("Mm bacon" + total[2]);
+                    System.out.println("Mm bacon");
 
 
                 }
 
                 case 2 -> {
 
-                    System.out.println("Varför dricker du saltet är du dum i huvet Ja/Nej");
-                    svar = input.next();
-                    if (svar.equalsIgnoreCase("ja")) {
-                        System.out.println("Jag skulle rekommendera att inte dricka saltet");
-                    }
+
+                    System.out.println("Jag skulle rekommendera att inte dricka saltet");
+
                 }
 
 
