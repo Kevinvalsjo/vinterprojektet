@@ -24,9 +24,9 @@ public class MyInterface {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
         int[] total = new int[7];
         Scanner input = new Scanner(System.in);
-        allaI.put("dåligsås", new dåligsås());
-        allaI.put("brunsås", new Brunsås());
-        allaI.put("vitlökssås", new Vitlökssås());
+        allaI.put("dåligsås", new dåligsås("Spanien", 50, 50, 30));
+        allaI.put("brunsås", new Brunsås("Spanien", 50, 50, 30));
+        allaI.put("vitlökssås", new Vitlökssås("Spanien", 50, 50, 30));
         allaI.put("sås", new Sås("Spanien", 50, 50, 30));
         allaI.put("ris", new Ris("Kina", 100, 5, 70));
         allaI.put("majs", new Majs("Argentina", 20, 10, 250));
@@ -434,7 +434,7 @@ public class MyInterface {
                         input.nextLine();
                         input.nextLine();
                         ing = allaI.get("ris");
-
+                        total[3] = 0;
                         k = 1;
 
                     }
@@ -442,6 +442,7 @@ public class MyInterface {
                         System.out.println("Riset brände fast (Enter)");
                         input.nextLine();
                         ing = allaI.get("salt");
+                        total[4] = 0;
 
                         k = 2;
 
@@ -450,13 +451,14 @@ public class MyInterface {
                         System.out.println("Saltet brändes(Enter)");
                         input.nextLine();
                         input.nextLine();
-
+                        total[1] = 0;
                         ing = allaI.get("bacon");
                         k = 3;
                     }
                     if (värme == ing.getgrader() && k == 3) {
                         System.out.println("Bacon brändes (Enter)");
                         input.nextLine();
+                        total[2] = 0;
                         ing = allaI.get("majs");
 
                         k = 4;
@@ -465,6 +467,7 @@ public class MyInterface {
                     if (värme == ing.getgrader() && k == 4) {
                         System.out.println("Din sista ingrediens brändes, nu da?");
                         input.nextLine();
+                        total[5] = 0;
                         input.nextLine();
 
 
@@ -500,35 +503,56 @@ public class MyInterface {
             svar1 = input.nextInt();
             switch (svar1) {
                 case 1 -> {
+                    if (total[2] == 0) {
 
-                    System.out.println("Mm bacon");
+                        System.out.println("Du har bränt bort all din bacon tyvärr");
 
 
+                    }
                 }
 
                 case 2 -> {
-
-
-                    System.out.println("Jag skulle rekommendera att inte dricka saltet");
-
+                    if (total[1] == 0) {
+                        System.out.println("Du har bränt bort all ditt salt tyvärr");
+                    } else {
+                        System.out.println("Jag skulle rekommendera att inte dricka saltet");
+                    }
                 }
 
 
                 case 3 -> {
-                    System.out.println("Nu har du valt att dricka såsen men jag förstår dig inte");
+                    if (total[3] == 0) {
+
+                        System.out.println("Du har bränt bort all din sås tyvärr");
+
+
+                    } else {
+                        System.out.println("Nu har du valt att dricka såsen men jag förstår dig inte");
+                    }
                 }
                 case 4 -> {
-                    System.out.println("ris");
+                    if (total[4] == 0) {
 
+                        System.out.println("Du har bränt bort all ditt ris tyvärr");
+
+
+                    } else {
+                        System.out.println("ris");
+                    }
 
                 }
                 case 5 -> {
-                    System.out.println("majs");
+                    if (total[5] == 0) {
+
+                        System.out.println("Du har bränt bort all ditt majs tyvärr");
 
 
+                    } else {
+                        System.out.println("majs");
+
+                    }
                 }
                 case 6 -> {
-                    System.out.println("ris");
                     eat = 1;
 
 
