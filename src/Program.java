@@ -34,6 +34,7 @@ public class Program {
 
     }
 
+    //metoden som kör programmet
     public void run() {
         int[] total = {0, 0, 0, 0, 0, 0, 0};
         Scanner input = new Scanner(System.in);
@@ -51,8 +52,8 @@ public class Program {
             checkYN(input);//kollar ja eller nej
         }
 
-        // while loop som omfattar andra while loopar så att man alltid kan
-        // t.ex veta mer om en ingrediens oavsett om man har hoppat ur just den while loopen
+
+        // veta mer om en ingrediens oavsett om man har hoppat ur just den while loopen
 
         info(input);
 
@@ -67,9 +68,10 @@ public class Program {
 
         System.out.println("Nu är det då dags att sätta på spisen, Vill du veta lite om ingrediensernas gradtålighet innan du börjar ja/nej");
 
-        checkYN(input);
+        checkYN(input);//kollar ja eller nej
 
         boolean san = svarYN.equalsIgnoreCase("ja");
+
         if (san == true) {
             cookingInfo(input, san);
         } else {
@@ -79,12 +81,15 @@ public class Program {
         System.out.println("Nu är det dags att dra på värmen(Enter)");
         input.nextLine();
         input.nextLine();
+        //metoden körs och maten värms upp
         cook(input, total);
-
+//metoden körs och man kan välja hur mycket man ska lägga på tallriken
         eat(input, total);
 
     }
 
+
+    //kollar så att användaren har skrivit ja eller nej
     private void checkYN(Scanner input) {
         this.svarYN = input.next();
         while (!"ja".equalsIgnoreCase(this.svarYN) && !"nej".equalsIgnoreCase(this.svarYN)) {
@@ -93,6 +98,7 @@ public class Program {
         }
     }
 
+    //kollar så att användaren har skrivit 1-6
     private void check16(Scanner input) {
         this.svarNum = input.next();
         while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum) && !"4".equalsIgnoreCase(svarNum) && !"5".equalsIgnoreCase(svarNum) && !"6".equalsIgnoreCase(svarNum)) {
@@ -103,6 +109,7 @@ public class Program {
         }
     }
 
+    //kollar så att användaren har skrivit 1-7
     private void check17(Scanner input) {
         this.svarNum = input.next();
         while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum) && !"4".equalsIgnoreCase(svarNum) && !"5".equalsIgnoreCase(svarNum) && !"6".equalsIgnoreCase(svarNum) && !"7".equalsIgnoreCase(svarNum)) {
@@ -113,6 +120,7 @@ public class Program {
         }
     }
 
+    //kollar så att användaren har skrivit 1-2
     private void check12(Scanner input) {
         this.svarNum = input.next();
         while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum)) {
@@ -123,6 +131,7 @@ public class Program {
         }
     }
 
+    //här kan man få reda på kalorier och salt på ingredienserna
     private void info(Scanner input) {
         // while loop som används för att veta mer om ingredienser
         while (info == 0) {
@@ -199,6 +208,7 @@ public class Program {
         }
     }
 
+    //man kan välja vad man ska lägga i.
     private void chooseIng(Scanner input, int[] total) {
         // while loop som handlar om att laga mat där man får reda på hur många gånger man kan använda något
         // och hur mycket kalorier maträtten innehåller
@@ -209,6 +219,7 @@ public class Program {
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
                 case 1 -> {
+                    //ing objektet sätts till salt och kör metoden mat i ingredienser och returnera sen värdet
                     ing = allaI.get("salt");
                     total[1] = ing.mat();
                 }
@@ -240,6 +251,7 @@ public class Program {
         }
     }
 
+    //här kan man få reda på om de olika ingrediensernas gradtålighet.
     private void cookingInfo(Scanner input, boolean san) {
         while (san == true) {
             System.out.println("Okej Vilken vill du veta mer om 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
@@ -273,6 +285,7 @@ public class Program {
         }
     }
 
+    //man kan värma maten.
     private void cook(Scanner input, int[] total) {
 
         ing = allaI.get("sås");
@@ -317,6 +330,7 @@ public class Program {
             for (int a = 0; a < 60000000; a++) {
 
             }
+            //ger användaren en chans att avsluta uppvärmningen.
             if (värme == 100 || värme == 200 || värme == 300 || värme == 400 || värme == 500 || värme == 600 || värme == 700 || värme == 800 || värme == 900 || värme == 1000) {
                 System.out.println("Vill du forsätta värma upp? Ja/Nej");
                 svarNum = input.next();
@@ -327,7 +341,7 @@ public class Program {
         }
     }
 
-
+    //man kan lägga upp på tallriken och den räknar upp hur mycket man har lagt på
     private void eat(Scanner input, int[] total) {
         int totCal = 0;
         while (eat == 0) {
@@ -337,6 +351,7 @@ public class Program {
             switch (svarNumInt) {
 
                 case 1 -> {
+                    //ing sätts till salt och den räknar upp totCal och man får sedan ut ett svar, detta gäller för respektive ingrediens
                     ing = allaI.get("salt");
 
                     if (total[1] == 0) {

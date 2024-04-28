@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ingredienser {// variablerna är inte privata för att arven måste komma åt de. går nog att lösa på något sätt
+public class Ingredienser {// variablerna är inte privata för att arven måste komma åt de.
     protected String location;//var kommer ingrediensen ifrån
     protected int kalorier;//hur många kalorier i en ignrediens
     protected int uses;//hur många gånger man kan använda en ingrediens
@@ -8,6 +8,7 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
     protected int grader;
     protected String consis;
 
+    //getmetoder för att hämta värden
     public int getkalo() {
         return kalorier;
     }
@@ -28,7 +29,7 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
         this.uses = uses;
     }
 
-
+    //tar in värden från Program klasen och räknar ut hur många användingar man har kvar
     public int mat() {
 
         if (uses <= 0) {
@@ -73,6 +74,7 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
          return total;
      }
      */
+    //metod som alla ingredienserna overridar(polymorfism)
     public String returnMyName() {
         return "Detta är en ingrediens";
     }
