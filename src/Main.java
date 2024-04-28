@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Välkommen till the food program där man kan göra bra mat");
-        Program t = new Program();
-        t.run();
+        CookingProgram prog = new CookingProgram();
+        prog.run();
         System.out.println("Hejdå!!!");
     }
 

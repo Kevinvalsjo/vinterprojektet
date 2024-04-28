@@ -1,14 +1,16 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Program {
-    //initierar alla variabler som används
+public class CookingProgram {
+
+    //länkar en sträng till en ingrediens
     private HashMap<String, Ingredienser> allaI;
     private Ingredienser ing;
     private int eat, värma, värme, svarNumInt, info, laga, k;
     private String svarNum, svarYN;
 
-    public Program() {
+    //initierar alla variabler som används
+    public CookingProgram() {
         // sätter alla startvärden
         this.allaI = new HashMap<>();
         this.ing = null;
@@ -55,9 +57,9 @@ public class Program {
 
         // veta mer om en ingrediens oavsett om man har hoppat ur just den while loopen
 
-        info(input);
-
-        chooseIng(input, total);
+        infoIngrediens(input);
+        //välja ingrediens
+        chooseIngrediens(input, total);
 
 
         System.out.println("Du har " + total[1] + " kalorier salt");
@@ -82,9 +84,9 @@ public class Program {
         input.nextLine();
         input.nextLine();
         //metoden körs och maten värms upp
-        cook(input, total);
-//metoden körs och man kan välja hur mycket man ska lägga på tallriken
-        eat(input, total);
+        cookIngrediens(input, total);
+        //metoden körs och man kan välja hur mycket man ska lägga på tallriken
+        eatIngrediens(input, total);
 
     }
 
@@ -132,7 +134,7 @@ public class Program {
     }
 
     //här kan man få reda på kalorier och salt på ingredienserna
-    private void info(Scanner input) {
+    private void infoIngrediens(Scanner input) {
         // while loop som används för att veta mer om ingredienser
         while (info == 0) {
             if (svarYN.equalsIgnoreCase("nej")) {
@@ -209,10 +211,11 @@ public class Program {
     }
 
     //man kan välja vad man ska lägga i.
-    private void chooseIng(Scanner input, int[] total) {
+    private void chooseIngrediens(Scanner input, int[] total) {
         // while loop som handlar om att laga mat där man får reda på hur många gånger man kan använda något
         // och hur mycket kalorier maträtten innehåller
         while (laga == 0) {
+
 
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta, Om du får slut på en ingrediens kommer du bli riktigt arg");
             check17(input);
@@ -240,7 +243,7 @@ public class Program {
                     total[5] = ing.mat();
                 }
                 case 6 -> {
-                    info(input);
+                    infoIngrediens(input);
                 }
                 case 7 -> {
                     int totalen = total[1] + total[2] + total[3] + total[4] + total[5];
@@ -286,7 +289,7 @@ public class Program {
     }
 
     //man kan värma maten.
-    private void cook(Scanner input, int[] total) {
+    private void cookIngrediens(Scanner input, int[] total) {
 
         ing = allaI.get("sås");
         for (int r = 0; r < 1000; r++) {
@@ -342,7 +345,7 @@ public class Program {
     }
 
     //man kan lägga upp på tallriken och den räknar upp hur mycket man har lagt på
-    private void eat(Scanner input, int[] total) {
+    private void eatIngrediens(Scanner input, int[] total) {
         int totCal = 0;
         while (eat == 0) {
             System.out.println("Vad vill du lägga på tallriken?\n 1.Salt 2.Bacon 3.Sås 4.Ris 5.Majs.6.Ät");
