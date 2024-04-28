@@ -7,5 +7,8 @@ public class Majs extends Ingredienser {
         this.uses = uses;
     }
 
-
+    @Override
+    public String returnMyName() {
+        return "majs";
+    }
 }

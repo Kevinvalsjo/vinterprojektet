@@ -8,5 +8,9 @@ public class Vitlökssås extends Sås {
         System.out.println("Inte så stark");
     }
 
+    @Override
+    public String returnMyName() {
+        return "vitlökssås";
+    }
 
 }

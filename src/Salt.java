@@ -7,4 +7,9 @@ public class Salt extends Ingredienser {
         this.uses = uses;
     }
 
+    @Override
+    public String returnMyName() {
+        return "salt";
+    }
+
 }

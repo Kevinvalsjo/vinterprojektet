@@ -4,6 +4,16 @@ public class dåligsås extends Sås {
 
     }
 
+    @Override
+    public void stark() {
+        System.out.println("Jätta äcklig och stark");
+    }
+
+    @Override
+    public String returnMyName() {
+        return "dåligsås";
+    }
+
 }
 
 

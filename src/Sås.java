@@ -11,4 +11,10 @@ public class Sås extends Ingredienser {
     public void stark() {
         System.out.println("Såsens starkhet");
     }
+
+    @Override
+    public String returnMyName() {
+        return "sås";
+    }
+
 }

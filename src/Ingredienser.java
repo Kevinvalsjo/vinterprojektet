@@ -32,8 +32,7 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
     public int mat() {
 
         if (uses <= 0) {
-            total = 0;
-            System.out.println("Du blev så arg för att du inte hade mer av denna och kastade kastrullen ut igenom fönstret och förlorade alla ingredienser du hade lagt i");
+            System.out.println("Du har inte mer av denna");
         } else {
             System.out.println("Du har bara " + uses + " användningar kvar");
             total += getkalo();
@@ -45,34 +44,37 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
         return total;
     }
 
-    int användare;
 
-    public int setKalorier(int kalorier) {
-        if (kalorier >= 0) {
-            total -= användare;
-            System.out.println("Du har nu " + total + " av denna"
+    /* public int setKalorier(int kalorier) {
+         if (kalorier >= 0) {
+             total -= kalorier;
+             System.out.println("Du har nu " + total + " av denna"
 
-            );
+             );
 
-        } else {
-            System.out.println("Du har ingen av denna");
-        }
+         } else {
+             System.out.println("Du har ingen av denna");
+         }
 
 
-        return total;
-    }
+         return total;
+     }
 
-    public double setKalorier(double kalorier) {
-        if (kalorier >= 0) {
-            total -= användare;
-            System.out.println("Du har nu " + total + " av denna"
+     public double setKalorier(double kalorier) {
+         if (kalorier >= 0) {
+             total -= kalorier;
+             System.out.println("Du har nu " + total + " av denna"
 
-            );
+             );
 
-        } else {
-            System.out.println("Du har ingen av denna");
-        }
-        return total;
+         } else {
+             System.out.println("Du har ingen av denna");
+         }
+         return total;
+     }
+     */
+    public String returnMyName() {
+        return "Detta är en ingrediens";
     }
 
 }

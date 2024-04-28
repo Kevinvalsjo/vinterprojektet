@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+/*import java.util.HashMap;
 import java.util.Scanner;
 
 public class MyInterface {
@@ -566,3 +566,4 @@ public class MyInterface {
 
     }
 }
+*/

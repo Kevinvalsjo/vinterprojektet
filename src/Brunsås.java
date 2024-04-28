@@ -9,6 +9,10 @@ public class Brunsås extends Sås {
         System.out.println("Väldigt stark");
     }
 
+    @Override
+    public String returnMyName() {
+        return "brunsås";
+    }
 
 }
 

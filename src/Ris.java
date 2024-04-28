@@ -8,5 +8,8 @@ public class Ris extends Ingredienser {
 
     }//konstruktor som tar in värden från objekt skapandet i main, Här sätts ris.location ris.kalorier och ris.uses.
 
-
+    @Override
+    public String returnMyName() {
+        return "ris";
+    }
 }

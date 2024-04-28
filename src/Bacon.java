@@ -10,6 +10,9 @@ public class Bacon extends Ingredienser {
     }
 
 
-    //constructor för Baco
+    @Override
+    public String returnMyName() {
+        return "bacon";
+    }
 //
 }
