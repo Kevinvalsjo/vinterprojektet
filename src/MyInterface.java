@@ -7,27 +7,24 @@ public class MyInterface {
     Ingredienser ing;
     int eat;
     int värma;
-    int Total;
     int värme;
     int i = 0;
     int svar1 = i;
     String svar;
     int info = i;
     int laga = i;
-    int total = i;
     int k;
-    int p;
-    int h;
     String svar2;
 
     public MyInterface() {
+
         System.out.println("Välkommen till the food program där man kan göra bra mat");
         int[] total = new int[7];
         Scanner input = new Scanner(System.in);
-        allaI.put("dåligsås", new dåligsås("Spanien", 50, 50, 30));
-        allaI.put("brunsås", new Brunsås("Spanien", 50, 50, 30));
-        allaI.put("vitlökssås", new Vitlökssås("Spanien", 50, 50, 30));
-        allaI.put("sås", new Sås("Spanien", 50, 50, 30));
+        allaI.put("dåligsås", new dåligsås("Spanien", 50, 50, 30, "flytande"));
+        allaI.put("brunsås", new Brunsås("Spanien", 50, 50, 30, "flytande"));
+        allaI.put("vitlökssås", new Vitlökssås("Spanien", 50, 50, 30, "flytande"));
+        allaI.put("sås", new Sås("Spanien", 50, 50, 30, "flytande"));
         allaI.put("ris", new Ris("Kina", 100, 5, 70));
         allaI.put("majs", new Majs("Argentina", 20, 10, 250));
         allaI.put("salt", new Salt("Uganda", 3, 10, 150));
@@ -39,15 +36,11 @@ public class MyInterface {
             total[r] = 0;
 
         }
-        System.out.println("Vill du laga mat? (Ja/Nej)");
+        System.out.println("Vill du spela Ja/nej");
         svar2 = input.next();
 
-        while (!"ja".equalsIgnoreCase(svar2) && !"nej".equalsIgnoreCase(svar2)) {
 
-            System.out.println("Du måste skriva 'ja' eller 'nej'");
-            svar2 = input.next();
-
-        }//körs tills användaren skriver rätt,
+        //körs tills användaren skriver rätt,
 
 
         if (svar2.equalsIgnoreCase("nej")) {
@@ -503,10 +496,12 @@ public class MyInterface {
             svar1 = input.nextInt();
             switch (svar1) {
                 case 1 -> {
-                    if (total[2] == 0) {
+                    ing = allaI.get("bacon");
+                    if (total[2] >= 0) {
+                        System.out.println("Hur mycket kalorier vill du äta upp?");
+                        svar1 = input.nextInt();
 
-                        System.out.println("Du har bränt bort all din bacon tyvärr");
-
+                        System.out.println(total[2]);
 
                     }
                 }
@@ -537,6 +532,9 @@ public class MyInterface {
 
 
                     } else {
+                        System.out.println("Hur mycket kalorier vill du äta?");
+                        svar2 = input.next();
+
                         System.out.println("ris");
                     }
 
@@ -564,4 +562,7 @@ public class MyInterface {
     }
 
 
+    private static void info() {
+
+    }
 }

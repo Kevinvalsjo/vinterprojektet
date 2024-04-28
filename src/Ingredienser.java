@@ -1,9 +1,12 @@
-abstract class Ingredienser {// variablerna är inte privata för att arven måste komma åt de. går nog att lösa på något sätt
+import java.util.Scanner;
+
+public class Ingredienser {// variablerna är inte privata för att arven måste komma åt de. går nog att lösa på något sätt
     protected String location;//var kommer ingrediensen ifrån
     protected int kalorier;//hur många kalorier i en ignrediens
     protected int uses;//hur många gånger man kan använda en ingrediens
     private int total;
     protected int grader;
+    protected String consis;
 
     public int getkalo() {
         return kalorier;
@@ -42,10 +45,34 @@ abstract class Ingredienser {// variablerna är inte privata för att arven mås
         return total;
     }
 
-    // public abstract int getkalo();
+    int användare;
 
-    //public abstract String getlocation();
+    public int setKalorier(int kalorier) {
+        if (kalorier >= 0) {
+            total -= användare;
+            System.out.println("Du har nu " + total + " av denna"
 
-    //public abstract int getuses();
+            );
+
+        } else {
+            System.out.println("Du har ingen av denna");
+        }
+
+
+        return total;
+    }
+
+    public double setKalorier(double kalorier) {
+        if (kalorier >= 0) {
+            total -= användare;
+            System.out.println("Du har nu " + total + " av denna"
+
+            );
+
+        } else {
+            System.out.println("Du har ingen av denna");
+        }
+        return total;
+    }
 
 }
