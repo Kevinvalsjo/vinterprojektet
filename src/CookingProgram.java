@@ -4,9 +4,12 @@ import java.util.Scanner;
 public class CookingProgram {
 
     //länkar en sträng till en ingrediens
-    private HashMap<String, Ingredienser> allaI;
+    private final HashMap<String, Ingredienser> allaI;
     private Ingredienser ing;
-    private int eat, värma, värme, svarNumInt, info, laga, k;
+    private int eat;
+    private int värme;
+    private int svarNumInt;
+    private int k;
     private String svarNum, svarYN;
 
     //initierar alla variabler som används och sätter startvärden
@@ -15,11 +18,8 @@ public class CookingProgram {
         this.allaI = new HashMap<>();
         this.ing = null;
         this.eat = 0;
-        this.värma = 0;
         this.värme = 0;
         this.svarNumInt = 0;
-        this.info = 0;
-        this.laga = 0;
         this.k = 0;
         this.svarNum = "";
         this.svarYN = "";
@@ -50,7 +50,10 @@ public class CookingProgram {
             System.out.println("Du har valt att avsluta");
             return;
         } else {
-            saltQuestion(input);
+            // Skapar saltkar och salt
+            Saltkar sk = new Saltkar(10, "Foodora");
+            Salt s = sk.addSalt("Uganda", 3, 10, 150);
+            saltQuestion(input, sk, s);
             System.out.println("Skulle du vilja veta lite om ingredienserna som du kan välja? (Ja/Nej)");
             checkYN(input);//kollar ja eller nej
         }
@@ -75,8 +78,8 @@ public class CookingProgram {
 
         boolean san = svarYN.equalsIgnoreCase("ja");
 
-        if (san == true) {
-            cookingInfo(input, san);
+        if (san) {
+            cookingInfo(input, true);
         } else {
             System.out.println("Taskigt");
         }
@@ -105,13 +108,11 @@ public class CookingProgram {
     //kollar så att användaren har skrivit 1-slutvärdet syftet är att programmet ska inte krascha om användaren skriver fel.
 
     private void checkNum(Scanner input, int slut) {
-        boolean okInput = false;
-        while (!okInput) {
+        while (true) {
             this.svarNum = input.next();
             for (int i = 1; i <= slut; i++) {
                 String s = "" + i;
                 if (s.equalsIgnoreCase(svarNum)) {
-                    okInput = true;
                     return;
                 }
             }
@@ -122,10 +123,7 @@ public class CookingProgram {
     //här kan man få reda på kalorier och salt på ingredienserna
     private void infoIngrediens(Scanner input) {
         // while loop som används för att veta mer om ingredienser
-        while (info == 0) {
-            if (svarYN.equalsIgnoreCase("nej")) {
-                break;
-            }
+        while (!svarYN.equalsIgnoreCase("nej")) {
 
             System.out.println("Vilken ingrediens är du intresserad av? \n1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
 
@@ -143,7 +141,7 @@ public class CookingProgram {
                 }
                 case 3 -> {
                     ing = allaI.get("sås");
-                    System.out.println("Så du vill veta lite mer om sås, spännande, det finns faktiskt 3 olika såser. Vilken vill du veta mer om? 1.Brunsås 2.Vitlökssås 3.dåligsås");
+                    System.out.println("Så du vill veta lite mer om sås, spännande, det finns faktiskt 3 olika såser. Vilken vill du veta mer om? 1.Brunsås 2.Vitlökssås 3.Dåligsås");
 
 
                     checkNum(input, 3);
@@ -203,7 +201,7 @@ public class CookingProgram {
     private void chooseIngrediens(Scanner input, int[] total) {
         // while loop som handlar om att laga mat där man får reda på hur många gånger man kan använda något
         // och hur mycket kalorier maträtten innehåller
-        while (laga == 0) {
+        while (true) {
 
 
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta, Om du får slut på en ingrediens kommer du bli riktigt arg");
@@ -232,15 +230,9 @@ public class CookingProgram {
 
                     svarNumInt = Integer.parseInt(svarNum);
                     switch (svarNumInt) {
-                        case 1 -> {
-                            ing = allaI.get("brunsås");
-                        }
-                        case 2 -> {
-                            ing = allaI.get("vitlökssås");
-                        }
-                        case 3 -> {
-                            ing = allaI.get("dåligsås");
-                        }
+                        case 1 -> ing = allaI.get("brunsås");
+                        case 2 -> ing = allaI.get("vitlökssås");
+                        case 3 -> ing = allaI.get("dåligsås");
                     }
                     total[3] = ing.mat();
                 }
@@ -252,9 +244,7 @@ public class CookingProgram {
                     ing = allaI.get("majs");
                     total[5] = ing.mat();
                 }
-                case 6 -> {
-                    infoIngrediens(input);
-                }
+                case 6 -> infoIngrediens(input);
                 case 7 -> {
                     int totalen = total[1] + total[2] + total[3] + total[4] + total[5];
                     System.out.println("Din maträtt har " + totalen + " kalorier");
@@ -264,9 +254,9 @@ public class CookingProgram {
         }
     }
 
-    //här kan man få reda på om de olika ingrediensernas gradtålighet. syftet med det är så att man inte ska kunna bränna ingredienserna i cookingrediens
+    //Här kan man få reda på om de olika ingrediensernas gradtålighet. Syftet med det är så att man inte ska kunna bränna ingredienserna i cookingrediens
     private void cookingInfo(Scanner input, boolean san) {
-        while (san == true) {
+        while (san) {
             System.out.println("Okej Vilken vill du veta mer om 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
             checkNum(input, 6);
             svarNumInt = Integer.parseInt(svarNum);
@@ -295,14 +285,13 @@ public class CookingProgram {
                     ing = allaI.get("majs");
                     System.out.println("Den här ingrediensen kommer dö vid temperaturen " + ing.getgrader() + " grader");
                 }
-                case 6 -> {
-                    san = false;
-                }
+                case 6 -> san = false;
+
             }
         }
     }
 
-    //man kan värma maten. syftet är att ha en metod så att användaren kan bränna ingredienser.
+    //Man kan värma maten. Syftet är att ha en metod så att användaren kan bränna ingredienser.
     private void cookIngrediens(Scanner input, int[] total) {
 
         ing = allaI.get("sås");
@@ -351,6 +340,8 @@ public class CookingProgram {
                 input.nextLine();
             }
             System.out.println(värme);
+
+            //for loopen skapar en delay så att man hinner se när värmen går upp så att den inte går upp till 1000 grader på en sekund
             for (int a = 0; a < 60000000; a++) {
 
             }
@@ -451,9 +442,7 @@ public class CookingProgram {
                         //  ing.setKalorier(value);
                     }
                 }
-                case 6 -> {
-                    eat = 1;
-                }
+                case 6 -> eat = 1;
 
             }
 
@@ -463,10 +452,7 @@ public class CookingProgram {
     }
 
     //frågar användaren om man vill behålla salt eller byta, syftet med den här är att få till komposition i programmet
-    private void saltQuestion(Scanner input) {
-        Saltkar sk = new Saltkar(10, "Foodora");
-        Salt s = sk.addSalt("Uganda", 3, 10, 150);
-
+    private void saltQuestion(Scanner input, Saltkar sk, Salt s) {
         System.out.println("Vill du använda " + sk + " som innehåller" + s);
         System.out.println("1. Byt ut 2.Behåll saltet 3.Skippa salt");
         checkNum(input, 3);
