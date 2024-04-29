@@ -24,10 +24,10 @@ public class CookingProgram {
         this.svarNum = "";
         this.svarYN = "";
         //skapar objekt för ingredienserna och anger dess egenskaper
-        allaI.put("dåligsås", new dåligsås("Spanien", 50, 50, 30, "flytande"));
-        allaI.put("brunsås", new Brunsås("Spanien", 50, 50, 30, "flytande"));
-        allaI.put("vitlökssås", new Vitlökssås("Spanien", 50, 50, 30, "flytande"));
-        allaI.put("sås", new Sås("Spanien", 50, 50, 30, "flytande"));
+        allaI.put("dåligsås", new dåligsås("Spanien", 50, 50, 30));
+        allaI.put("brunsås", new Brunsås("Spanien", 50, 50, 30));
+        allaI.put("vitlökssås", new Vitlökssås("Spanien", 50, 50, 30));
+        allaI.put("sås", new Sås("Spanien", 50, 50, 30));
         allaI.put("ris", new Ris("Kina", 100, 5, 70));
         allaI.put("majs", new Majs("Argentina", 20, 10, 250));
         allaI.put("salt", new Salt("Uganda", 3, 10, 150));
@@ -360,7 +360,7 @@ public class CookingProgram {
                     if (total[1] == 0) {
                         System.out.println("Du har bränt eller redan tagit allt ditt " + ing.returnMyName());
                     } else {
-                        System.out.println("Du har " + total[1] + " kalorier salt");
+                        System.out.println("Du har " + total[1] + " kalorier " + ing.returnMyName());
                         System.out.println("Hur många kalorier vill du lägga på tallriken?");
                         int value = input.nextInt();
                         total[1] -= value;
@@ -389,7 +389,7 @@ public class CookingProgram {
                     if (total[3] == 0) {
                         System.out.println("Du har bränt eller redan tagit all din " + ing.returnMyName());
                     } else {
-                        System.out.println("Du har " + total[3] + " kalorier sås");
+                        System.out.println("Du har " + total[3] + " kalorier" + ing.returnMyName());
                         System.out.println("Hur många kalorier vill du lägga på tallriken?");
                         int value = input.nextInt();
                         total[3] -= value;
@@ -404,7 +404,7 @@ public class CookingProgram {
                     if (total[4] == 0) {
                         System.out.println("Du har bränt eller redan tagit allt ditt " + ing.returnMyName());
                     } else {
-                        System.out.println("Du har " + total[4] + " kalorier ris");
+                        System.out.println("Du har " + total[4] + " kalorier " + ing.returnMyName());
                         System.out.println("Hur många kalorier vill du lägga på tallriken?");
                         int value = input.nextInt();
                         total[4] -= value;
@@ -418,8 +418,8 @@ public class CookingProgram {
                     if (total[5] == 0) {
                         System.out.println("Du har bränt eller redan tagit all din " + ing.returnMyName());
                     } else {
-                        System.out.println("Du har " + total[5] + " kalorier majs");
-                        System.out.println("Hur många kalorier vill du lägga på tallriken?");
+                        System.out.println("Du har " + total[5] + " kalorier " + ing.returnMyName());
+                        System.out.println("Hur många kalorier " + ing.returnMyName() + " vill du lägga på tallriken?");
                         int value = input.nextInt();
                         total[5] -= value;
                         totCal += value;

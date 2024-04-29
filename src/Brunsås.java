@@ -1,6 +1,6 @@
 public class Brunsås extends Sås {
-    Brunsås(String location, int kalo, int uses, int grader, String consis) {
-        super(location, kalo, uses, grader, consis);
+    Brunsås(String location, int kalo, int uses, int grader) {
+        super(location, kalo, uses, grader);
 
     }
 

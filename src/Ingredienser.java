@@ -33,7 +33,7 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
     public int mat() {
 
         if (uses <= 0) {
-            System.out.println("Du har inte mer av denna");
+            System.out.println("Du har inte mer " + returnMyName());
         } else {
             System.out.println("Du har bara " + uses + " användningar kvar");
             total += getkalo();
