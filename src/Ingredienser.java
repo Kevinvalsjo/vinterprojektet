@@ -6,9 +6,24 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
     protected int uses;//hur många gånger man kan använda en ingrediens
     private int total;
     protected int grader;
-    protected String consis;
+
+    Ingredienser(int uses) {
+        this.uses = uses;
+    }
+
+    Ingredienser(String location, int kalo, int uses, int grader) {
+        this.location = location;
+        this.kalorier = kalo;
+        this.grader = grader;
+        this.uses = uses;
+    }
+
 
     //getmetoder för att hämta värden
+    public String getLocation() {
+        return location;
+    }
+
     public int getkalo() {
         return kalorier;
     }
@@ -23,10 +38,6 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
 
     public int getuses() {
         return uses;
-    }
-
-    Ingredienser(int uses) {
-        this.uses = uses;
     }
 
     //tar in värden från Program klasen och räknar ut hur många användingar man har kvar
@@ -78,5 +89,6 @@ public class Ingredienser {// variablerna är inte privata för att arven måste
     public String returnMyName() {
         return "Detta är en ingrediens";
     }
+
 
 }

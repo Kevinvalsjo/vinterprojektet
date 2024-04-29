@@ -1,12 +1,14 @@
 public class dåligsås extends Sås {
-    dåligsås(String location, int kalo, int uses, int grader) {
-        super(location, kalo, uses, grader);
+    boolean möglig;
 
+    dåligsås(String location, int kalo, int uses, int grader, String färg, boolean möglig) {
+        super(location, kalo, uses, grader, färg);
+        this.möglig = möglig;
     }
 
     @Override
     public void stark() {
-        System.out.println("Jätta äcklig och stark");
+        System.out.println("Jätte äcklig och stark");
     }
 
     @Override

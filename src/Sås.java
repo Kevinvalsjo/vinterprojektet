@@ -1,11 +1,9 @@
 public class Sås extends Ingredienser {
-    Sås(String location, int kalo, int uses, int grader) {
-        super(uses);
-        this.location = location;
-        this.grader = grader;
-        this.kalorier = kalo;
-        this.uses = uses;
+    protected String färg;
 
+    Sås(String location, int kalo, int uses, int grader, String färg) {
+        super(location, kalo, uses, grader);
+        this.färg = färg;
     }
 
     public void stark() {
@@ -16,5 +14,6 @@ public class Sås extends Ingredienser {
     public String returnMyName() {
         return "sås";
     }
+
 
 }
