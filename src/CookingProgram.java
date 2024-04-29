@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -102,36 +101,21 @@ public class CookingProgram {
         }
     }
 
-    //kollar så att användaren har skrivit 1-6
-    private void check16(Scanner input) {
-        this.svarNum = input.next();
-        while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum) && !"4".equalsIgnoreCase(svarNum) && !"5".equalsIgnoreCase(svarNum) && !"6".equalsIgnoreCase(svarNum)) {
 
-            System.out.println("Du måste skriva en siffra i intervallet 1-6");
+    //kollar så att användaren har skrivit 1-slutvärdet syftet är att programmet ska inte krascha om användaren skriver fel.
+
+    private void checkNum(Scanner input, int slut) {
+        boolean okInput = false;
+        while (!okInput) {
             this.svarNum = input.next();
-
-        }
-    }
-
-    //kollar så att användaren har skrivit 1-7
-    private void check17(Scanner input) {
-        this.svarNum = input.next();
-        while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum) && !"4".equalsIgnoreCase(svarNum) && !"5".equalsIgnoreCase(svarNum) && !"6".equalsIgnoreCase(svarNum) && !"7".equalsIgnoreCase(svarNum)) {
-
-            System.out.println("Du måste skriva en siffra i intervallet 1-7");
-            this.svarNum = input.next();
-
-        }
-    }
-
-    //kollar så att användaren har skrivit 1-2
-    private void check12(Scanner input) {
-        this.svarNum = input.next();
-        while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum)) {
-
-            System.out.println("Du måste skriva en siffra i intervallet 1-2");
-            this.svarNum = input.next();
-
+            for (int i = 1; i <= slut; i++) {
+                String s = "" + i;
+                if (s.equalsIgnoreCase(svarNum)) {
+                    okInput = true;
+                    return;
+                }
+            }
+            System.out.println("Du måste skriva en siffra i intervallet 1-" + slut);
         }
     }
 
@@ -146,7 +130,7 @@ public class CookingProgram {
             System.out.println("Vilken ingrediens är du intresserad av? \n1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
 
             //
-            check16(input);
+            checkNum(input, 6);
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
                 case 1 -> {
@@ -160,14 +144,9 @@ public class CookingProgram {
                 case 3 -> {
                     ing = allaI.get("sås");
                     System.out.println("Så du vill veta lite mer om sås, spännande, det finns faktiskt 3 olika såser. Vilken vill du veta mer om? 1.Brunsås 2.Vitlökssås 3.dåligsås");
-                    svarNum = input.next();
 
-                    while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum)) {
 
-                        System.out.println("Du måste skriva en siffra i intervallet 1-3");
-                        svarNum = input.next();
-
-                    }
+                    checkNum(input, 3);
 
                     svarNumInt = Integer.parseInt(svarNum);
                     switch (svarNumInt) {
@@ -199,7 +178,7 @@ public class CookingProgram {
             }
 
             //
-            check12(input);
+            checkNum(input, 2);
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
                 case 1 -> {
@@ -228,7 +207,7 @@ public class CookingProgram {
 
 
             System.out.println("Vad vill du lägga i kastrullen, 1.Salt 2.bacon 3.Sås 4. Ris 5.Majs 6.Veta mer 7.Avsluta, Om du får slut på en ingrediens kommer du bli riktigt arg");
-            check17(input);
+            checkNum(input, 7);
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
                 case 1 -> {
@@ -247,14 +226,9 @@ public class CookingProgram {
                 case 3 -> {
                     ing = allaI.get("sås");
                     System.out.println("Vilken vill du lägga i? 1.Brunsås 2.Vitlökssås 3.dåligsås");
-                    svarNum = input.next();
 
-                    while (!"1".equalsIgnoreCase(svarNum) && !"2".equalsIgnoreCase(svarNum) && !"3".equalsIgnoreCase(svarNum)) {
 
-                        System.out.println("Du måste skriva en siffra i intervallet 1-3");
-                        svarNum = input.next();
-
-                    }
+                    checkNum(input, 3);
 
                     svarNumInt = Integer.parseInt(svarNum);
                     switch (svarNumInt) {
@@ -294,7 +268,7 @@ public class CookingProgram {
     private void cookingInfo(Scanner input, boolean san) {
         while (san == true) {
             System.out.println("Okej Vilken vill du veta mer om 1.Salt 2.bacon 3.Sås 4.Ris 5.Majs 6.Ingen");
-            check16(input);
+            checkNum(input, 6);
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
                 case 1 -> {
@@ -383,8 +357,8 @@ public class CookingProgram {
             //ger användaren en chans att avsluta uppvärmningen.
             if (värme == 100 || värme == 200 || värme == 300 || värme == 400 || värme == 500 || värme == 600 || värme == 700 || värme == 800 || värme == 900 || värme == 1000) {
                 System.out.println("Vill du forsätta värma upp? Ja/Nej");
-                svarNum = input.next();
-                if ("nej".equalsIgnoreCase(svarNum)) {
+                checkYN(input);
+                if ("nej".equalsIgnoreCase(svarYN)) {
                     r = 1001;
                 }
             }
@@ -396,7 +370,7 @@ public class CookingProgram {
         int totCal = 0;
         while (eat == 0) {
             System.out.println("Vad vill du lägga på tallriken?\n 1.Salt 2.Bacon 3.Sås 4.Ris 5.Majs.6.Ät");
-            check16(input);
+            checkNum(input, 6);
             svarNumInt = Integer.parseInt(svarNum);
             switch (svarNumInt) {
 
@@ -495,7 +469,7 @@ public class CookingProgram {
 
         System.out.println("Vill du använda " + sk + " som innehåller" + s);
         System.out.println("1. Byt ut 2.Behåll saltet 3.Skippa salt");
-        check16(input);
+        checkNum(input, 3);
         svarNumInt = Integer.parseInt(svarNum);
         switch (svarNumInt) {
             case 1 -> {

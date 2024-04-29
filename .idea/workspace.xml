@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="har glömt bort vad jag ändrade här helt ärligt">
-      <change afterPath="$PROJECT_DIR$/src/Saltkar.java" afterDir="false" />
+    <list default="true" id="738f99b5-9c81-47cd-95d0-7a4c00fd7814" name="Changes" comment="KOmposition och kommentarer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Brunsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Brunsås.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CookingProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CookingProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ingredienser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ingredienser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Salt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Salt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sås.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vitlökssås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vitlökssås.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dåligsås.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dåligsås.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +102,7 @@
       <workItem from="1713340921373" duration="3839000" />
       <workItem from="1713349029195" duration="10398000" />
       <workItem from="1713868162161" duration="7143000" />
-      <workItem from="1714238164413" duration="54251000" />
+      <workItem from="1714238164413" duration="56004000" />
     </task>
     <task id="LOCAL-00001" summary="uh">
       <option name="closed" value="true" />
@@ -431,14 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714376175106</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="KOmposition och kommentarer">
+      <option name="closed" value="true" />
+      <created>1714413864929</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1714413864929</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uh" />
     <MESSAGE value="lagt till construcotr" />
     <MESSAGE value="ny rätt" />
     <MESSAGE value="Förbättrat looparna och svaren" />
@@ -463,6 +463,7 @@
     <MESSAGE value="kommentarer" />
     <MESSAGE value="kommentarer och namn" />
     <MESSAGE value="har glömt bort vad jag ändrade här helt ärligt" />
-    <option name="LAST_COMMIT_MESSAGE" value="har glömt bort vad jag ändrade här helt ärligt" />
+    <MESSAGE value="KOmposition och kommentarer" />
+    <option name="LAST_COMMIT_MESSAGE" value="KOmposition och kommentarer" />
   </component>
 </project>
